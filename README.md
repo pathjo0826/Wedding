@@ -14,14 +14,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+To build for re-deployment run `ng build --configuration=production --base-href https://pathj0826.github.io/Wedding/`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploy
 
-## Running end-to-end tests
+To deploy the build run `npx angular-cli-ghpages --dir=dist/wedding-app` 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+When the app is deployed on GitHub pages and is accessible worldwide on: https://pathjo0826.github.io/Wedding/
