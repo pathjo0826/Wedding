@@ -9,6 +9,7 @@ import { ScheduleComponent } from './views/schedule/schedule.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './views/error/error.component';
+import { TimerComponent } from './components/timer/timer.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ScheduleComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
