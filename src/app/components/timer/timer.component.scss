@@ -1,0 +1,19 @@
+.container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 300px;
+    border: 1px solid rgb(150, 164, 152);
+    border-radius: 10px;
+    background-color: rgb(150, 164, 152);
+    color: white;
+
+    padding: 1em;
+}
+.text {
+    margin-bottom: 1em;
+}
