@@ -20,4 +20,4 @@ To build for re-deployment run `ng build --configuration=production --base-href 
 
 To deploy the build run `npx angular-cli-ghpages --dir=dist/wedding-app` 
 
-When the app is deployed on GitHub pages and is accessible worldwide on: https://pathjo0826.github.io/Wedding/
+When the app is deployed on GitHub pages and is accessible worldwide on:  
