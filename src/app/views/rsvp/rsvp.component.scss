@@ -16,12 +16,13 @@
 }
 
 label {
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 1em;
 }
 
 .input-field {
     margin-top: 0.5em;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
     width: 300px;
 }
 
@@ -29,4 +30,8 @@ label {
     margin-top: 0.5em;
     margin-bottom: 2em;
     width: 50px;
+}
+
+.error-message {
+    color: white;
 }

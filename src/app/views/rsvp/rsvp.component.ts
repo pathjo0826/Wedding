@@ -8,15 +8,35 @@ import { Component } from '@angular/core';
 })
 export class RsvpComponent {
 
-  constructor(private http: HttpClient) {
+  validName: boolean;
 
+  constructor(private http: HttpClient) {
+    this.validName = true;
   }
 
-  addGuest(guests: {name: string, plusOne: string, additional: string}){
-    console.log(guests);
-    const url = 'https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/guests.json';
-    this.http.post(url, guests).subscribe((resp) => {
-      console.log(resp);
-    })
+  addGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: any) {
+   
+    console.log(guest);
+    
+    try {
+      this.validateName(guest.name);
+      const url = 'https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/guests.json';
+      this.http.post(url, guest).subscribe((resp) => {
+        console.log(resp);
+      })
+
+      this.validName = true;
+      guestForm.reset();
+
+    } catch (error) {
+      this.validName = false;
+      console.log('Invalid name')
+    }
+  }
+
+  validateName(name: string) {
+    if (name.length < 1) {
+      throw Error;
+    }
   }
 }

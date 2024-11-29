@@ -3,12 +3,13 @@
     voluptatum id, sunt distinctio ipsam qui culpa enim iusto molestias, omnis quaerat numquam ipsa rerum beatae velit
     fugiat illo? Consectetur corporis quis, commodi odit cum, dicta ab obcaecati perferendis vel quo aut delectus!</p>
 <div class="container">
-    <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm.value)">
+    <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm.value, guestForm)">
         <label>Name</label>
         <input class="input-field" type="text" name="name" ngModel>
+        <div class="error-message" *ngIf="!validName">Name missing</div>
 
         <label>Plus one (if any)</label>
-        <input class="input-field" type="text" name="plusOne" placeholder="Name" ngModel>
+        <input class="input-field" type="text" name="plusOne" ngModel>
 
         <label>Additional info</label>
         <textarea class="input-field" name="additional" rows="5" ngModel></textarea>
