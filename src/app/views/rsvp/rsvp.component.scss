@@ -35,3 +35,44 @@ label {
 .error-message {
     color: white;
 }
+
+@media (max-width: 1000px) {
+    .form {
+        width: 300px;
+        height: auto;
+    }
+
+    .input-field {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        width: 200px;
+        height: auto;
+    }
+
+    .input-field {
+        width: 150px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .form {
+        width: 150px;
+        height: auto;
+    }
+
+    .input-field {
+        width: 120px;
+    }
+    
+    label {
+        font-size: 12px;
+    }
+}
