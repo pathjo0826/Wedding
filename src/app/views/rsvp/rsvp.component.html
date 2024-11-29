@@ -1,0 +1,18 @@
+<h2>Respondez, s'il vous plait</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro pariatur facere ab aliquam dolore, quia harum officiis
+    voluptatum id, sunt distinctio ipsam qui culpa enim iusto molestias, omnis quaerat numquam ipsa rerum beatae velit
+    fugiat illo? Consectetur corporis quis, commodi odit cum, dicta ab obcaecati perferendis vel quo aut delectus!</p>
+<div class="container">
+    <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm.value)">
+        <label>Name</label>
+        <input class="input-field" type="text" name="name" ngModel>
+
+        <label>Plus one (if any)</label>
+        <input class="input-field" type="text" name="plusOne" placeholder="Name" ngModel>
+
+        <label>Additional info</label>
+        <textarea class="input-field" name="additional" rows="5" ngModel></textarea>
+
+        <input class="submit-button" type="submit" value="Send">
+    </form>
+</div>
