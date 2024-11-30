@@ -1,4 +1,13 @@
 .container {
+    height: 100vh;
+    margin: 2em;
+}
+
+.text-container p {
+    font-size: 14px;
+}
+
+.form-container {
     display: flex;
     justify-content: flex-start;
 }

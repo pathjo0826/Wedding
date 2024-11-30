@@ -1,14 +1,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: 20% auto;
-    grid-template-rows: 100vh;
 }
 
 .grid-item1 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
 
     font-family: 'Lora', cursive;
     background-color: rgb(150, 164, 152);
@@ -18,12 +15,9 @@
 .grid-item2 {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
 
     background-color: white;
     font-family: 'Lora', cursive;
-    margin: 2em;
 }
 
 .avatar-container {
