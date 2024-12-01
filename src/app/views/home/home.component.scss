@@ -1,6 +1,41 @@
 .flex-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Waterfall', cursive;
+}
+
+.row1 {
+    position: absolute;
+    top: 5px;
+    //margin: 5px;
+    //line-height: 1.2;
+    //font-family: 'Waterfall', cursive;
+    font-size: 100px;
+    //text-decoration: underline black;
+    //text-decoration-thickness: 1px;
+    z-index: 2;
+}
+
+.row3 {
+    position: absolute;
+    top: 125px;
+    margin: 5px;
+    //line-height: 1.2;
+    //font-family: 'Waterfall', cursive;
+    font-size: 60px;
+    //text-decoration: underline black;
+    //text-decoration-thickness: 1px;
+    z-index: 2;
 }
 
 .background-image {
