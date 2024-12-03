@@ -21,83 +21,84 @@
     background-position: center;
 
     opacity: 0.25;
-    z-index: 1;
-}
-
-.container .welcome-text {
-    margin-top: 50px;
 }
 
 .welcome-text {
-    margin-top: 20px;
+    margin-top: 50px;
     font-family: 'Waterfall', cursive;
     font-size: 80px;
-    z-index: 2;
 }
 
 .timer {
-    position: absolute;
-    top: 45%;
-    right: 0%;
-    z-index: 2;
-
-    margin-top: 50px;
+    z-index: 1;
+    margin-top: 35px;
+    align-self: flex-end;
 }
 
 @media (max-width: 1200px) {
     .welcome-text {
+        margin-top: 50px;
         font-size: 70px;
+    }
+
+    .timer {
+        margin-top: 35px;
     }
 }
 
 
 @media (max-width: 1000px) {
     .welcome-text {
-        font-size: 60px;
+        margin-top: 60px;
+        font-size: 65px;
     }
 
     .timer {
-        top: 40%;
+        margin-top: 30px;
     }
 
 }
 
 @media (max-width: 800px) {
     .welcome-text {
+        margin-top: 70px;
         font-size: 52px;
     }
 
     .timer {
-        top: 35%;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 600px) {
     .welcome-text {
+        margin-top: 60px;
         font-size: 38px;
     }
 
     .timer {
-        top: 25%;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 450px) {
     .welcome-text {
+        margin-top: 50px;
         font-size: 35px;
     }
 
     .timer {
-        top: 22%;
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 400px) {
     .welcome-text {
+        margin-top: 50px;
         font-size: 28px;
     }
 
     .timer {
-        top: 17%;
+        margin-top: 20px;
     }
 }

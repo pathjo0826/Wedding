@@ -52,17 +52,17 @@ a:link, a:visited {
 
 @media (max-width: 1200px) {
 
+    .circular-frame {
+        width: 140px;
+        height: 140px;
+    }
+
     ul {
         padding-left: 2em;
     }
 
     ul li {
         font-size: 20px;
-    }
-
-    .circular-frame {
-        width: 140px;
-        height: 140px;
     }
 }
 
@@ -72,17 +72,17 @@ a:link, a:visited {
         grid-template-columns: 18% auto;
     }
 
+    .circular-frame {
+        width: 120px;
+        height: 120px;
+    }
+
     ul {
         padding-left: 1.5em;
     }
 
     ul li {
         font-size: 18px;
-    }
-
-    .circular-frame {
-        width: 120px;
-        height: 120px;
     }
 }
 
@@ -96,17 +96,21 @@ a:link, a:visited {
         width: 110px;
         height: 110px;
     }
-
+    
     ul li {
         font-size: 16px;
     }
-
 }
 
 @media (max-width: 600px) {
 
     .grid-container {
         grid-template-columns: 25% auto;
+    }
+
+    .circular-frame {
+        width: 90px;
+        height: 90px;
     }
 
     ul {
@@ -116,31 +120,26 @@ a:link, a:visited {
     ul li {
         font-size: 15px;
     }
-
-    .circular-frame {
-        width: 90px;
-        height: 90px;
-    }
 }
 
 @media (max-width: 450px) {
-
-    ul li {
-         font-size: 14px; }
 
     .circular-frame {
         width: 80px;
         height: 80px;
     }
+    ul li {
+         font-size: 14px; 
+        }
 }
 
 @media (max-width: 450px) {
-
-    ul li {
-         font-size: 12px; }
 
     .circular-frame {
         width: 70px;
         height: 70px;
     }
+    ul li {
+         font-size: 12px; 
+        }
 }
