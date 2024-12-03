@@ -6,7 +6,6 @@
 
     width: 100%;
     height: 100vh;
-
     position: relative;
 }
 
@@ -34,53 +33,66 @@
 
 .timer {
     position: relative;
-    left: 12.5vw;
+    left: 20%;
     z-index: 2;
 
     margin-top: 50px;
 }
 
-.test {
-    width: 300px;
-    height: auto;
+@media (max-width: 1200px) {
+    .welcome-text {
+        font-size: 70px;
+    }
 }
+
 
 @media (max-width: 1000px) {
     .welcome-text {
         font-size: 60px;
     }
 
-    .timer {
-        left: 12.5vw;
-    }
 }
 
-@media (max-width: 1200px) {
-    .background-image {
-        margin-top: -200px;
+@media (max-width: 800px) {
+    .welcome-text {
+        font-size: 50px;
     }
 
     .timer {
         left: 12vw;
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 600px) {
     .welcome-text {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .timer {
         left: 10vw;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 450px) {
     .welcome-text {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .timer {
         left: 8vw;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome-text {
+        font-size: 25px;
+    }
+
+    .timer {
+        left: 8vw;
+        margin-top: 20px;
     }
 }
