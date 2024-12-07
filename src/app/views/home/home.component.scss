@@ -13,7 +13,7 @@
     z-index: 1;
 }
 
-.time_and_place {
+.time-and-place {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,18 @@
     margin-top: 35px;
     align-self: flex-end;
     margin-bottom: 20px;
+}
+
+.our-story-headline {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.our-story-text {
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .collage-container {
@@ -98,6 +110,8 @@
 .collage-item-8 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
+    background-color: lightblue;
+    position:relative;
 }
 
 img {
@@ -114,7 +128,15 @@ img {
 
 img:hover {
     filter: grayscale(0%);
-    /* Remove grayscale on hover */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+    font-weight: bold;
 }
 
 @media (max-width: 1200px) {
@@ -123,15 +145,10 @@ img:hover {
         font-size: 70px;
     }
 
-    .time_and_place {
+    .time-and-place {
         font-size: 20px;
     }
-
-    .timer {
-        margin-top: 35px;
-    }
 }
-
 
 @media (max-width: 1000px) {
     .welcome-text {
@@ -139,7 +156,7 @@ img:hover {
         font-size: 65px;
     }
 
-    .time_and_place {
+    .time-and-place {
         font-size: 18px;
     }
 
@@ -147,11 +164,6 @@ img:hover {
         height: 4px;
         width: 4px;
     }
-
-    .timer {
-        margin-top: 30px;
-    }
-
 }
 
 @media (max-width: 800px) {
@@ -160,8 +172,18 @@ img:hover {
         font-size: 52px;
     }
 
-    .time_and_place {
+    .time-and-place {
         font-size: 16px;
+    }
+
+    .our-story-headline {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    .our-story-text {
+        font-size: 12px;
+        margin-top: 4px;
     }
 
     .timer {
@@ -176,13 +198,22 @@ img:hover {
         font-size: 38px;
     }
 
-    .time_and_place {
+    .time-and-place {
         font-size: 12px;
     }
 
     .dot {
         height: 3px;
         width: 3px;
+    }
+
+    .our-story-text {
+        font-size: 10px;
+    }
+
+    .our-story-headline {
+        margin-top: 15px;
+        font-size: 18px;
     }
 
     .timer {
@@ -196,8 +227,16 @@ img:hover {
         font-size: 35px;
     }
 
-    .time_and_place {
+    .time-and-place {
         font-size: 10px;
+    }
+
+    .our-story {
+        font-size: 8px;
+    }
+
+    .our-story-headline {
+        font-size: 14px;
     }
 
     .timer {
