@@ -6,15 +6,15 @@
 }
 
 .welcome-text {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     font-family: 'Waterfall', cursive;
     font-size: 80px;
     z-index: 1;
 }
 
 .time_and_place {
-    margin-bottom: 2%;
+    //margin-bottom: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,14 +50,15 @@
     grid-column-gap: 3%;
     grid-row-gap: 3%;
     margin-top: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    //-webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    //mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   
-    -webkit-mask-size: 100% 100%;
-     mask-size: 100% 100%;
+    //-webkit-mask-size: 100% 100%;
+    // mask-size: 100% 100%;
 }
 
 .collage-item-1 {
@@ -105,6 +106,7 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 5px;
     filter: grayscale(100%);
     /* Apply black-and-white effect */
     transition: filter 0.3s ease;
