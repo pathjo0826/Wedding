@@ -67,7 +67,7 @@
 
     //-webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
     //mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-  
+
     //-webkit-mask-size: 100% 100%;
     // mask-size: 100% 100%;
 }
@@ -75,26 +75,31 @@
 .collage-item-1 {
     grid-column: 1 / 1;
     grid-row: 1 / 2;
+    position: relative;
 }
 
 .collage-item-2 {
     grid-column: 2 / 2;
     grid-row: 1 / 2;
+    position: relative;
 }
 
 .collage-item-3 {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
+    position: relative;
 }
 
 .collage-item-4 {
     grid-column: 4 / 5;
     grid-row: 1 / 3;
+    position: relative;
 }
 
 .collage-item-5 {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    position: relative;
 }
 
 .collage-item-6 {
@@ -105,13 +110,13 @@
 .collage-item-7 {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    position: relative;
 }
 
 .collage-item-8 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    background-color: lightblue;
-    position:relative;
+    position: relative;
 }
 
 img {
@@ -121,7 +126,6 @@ img {
     object-fit: cover;
     border-radius: 5px;
     filter: grayscale(100%);
-    /* Apply black-and-white effect */
     transition: filter 0.3s ease;
     /* Smooth transition to color */
 }
@@ -130,12 +134,25 @@ img:hover {
     filter: grayscale(0%);
 }
 
-.overlay-text {
+.overlay-text-1_1 {
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 10%;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    /* Adds a subtle shadow for readability */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.overlay-text-9_16 {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    /* Adds a subtle shadow for readability */
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -147,6 +164,14 @@ img:hover {
 
     .time-and-place {
         font-size: 20px;
+    }
+
+    .overlay-text-1_1 {
+        font-size: 15px;
+    }
+
+    .overlay-text-9_16 {
+        font-size: 15px;
     }
 }
 
@@ -163,6 +188,14 @@ img:hover {
     .dot {
         height: 4px;
         width: 4px;
+    }
+
+    .overlay-text-1_1 {
+        font-size: 12px;
+    }
+
+    .overlay-text-9_16 {
+        font-size: 12px;
     }
 }
 
@@ -186,9 +219,14 @@ img:hover {
         margin-top: 4px;
     }
 
-    .timer {
-        margin-top: 30px;
+    .overlay-text-1_1 {
+        font-size: 10px;
     }
+
+    .overlay-text-9_16 {
+        font-size: 10px;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -216,9 +254,14 @@ img:hover {
         font-size: 18px;
     }
 
-    .timer {
-        margin-top: 30px;
+    .overlay-text-1_1 {
+        font-size: 8px;
     }
+
+    .overlay-text-9_16 {
+        font-size: 8px;
+    }
+
 }
 
 @media (max-width: 450px) {
@@ -239,8 +282,12 @@ img:hover {
         font-size: 14px;
     }
 
-    .timer {
-        margin-top: 20px;
+    .overlay-text-1_1 {
+        font-size: 6px;
+    }
+
+    .overlay-text-9_16 {
+        font-size: 6px;
     }
 }
 
