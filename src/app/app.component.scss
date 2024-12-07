@@ -1,6 +1,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 16% auto;
+    
 }
 
 .grid-item1 {
@@ -9,12 +10,13 @@
     font-family: 'Lora', cursive;
     background-color: rgb(150, 164, 152);
     color: white;
+    min-height: 100vh;
 }
 
 .grid-item2 {
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: white;
+    background-color: rgb(252, 251, 244);
     font-family: 'Lora', cursive;
 }
 
