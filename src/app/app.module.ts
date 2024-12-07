@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './views/error/error.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { RsvpComponent } from './views/rsvp/rsvp.component';
+//import { RegistryComponent } from './views/registry/registry.component';
 
 
 const appRoutes: Routes = [
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   {path: 'Home', component: HomeComponent},
   {path: 'About', component: AboutComponent},
   {path: 'Schedule', component: ScheduleComponent},
+  //{path: 'Registry', component: RegistryComponent}, 
   {path: 'Contact', component: ContactComponent},
   {path: 'Rsvp', component: RsvpComponent},
   {path: '**', component: ErrorComponent} 
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     ContactComponent,
     ErrorComponent,
     TimerComponent,
-    RsvpComponent
+    RsvpComponent,
+    //RegistryComponent
   ],
   imports: [
     BrowserModule,
