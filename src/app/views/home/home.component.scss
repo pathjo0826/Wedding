@@ -1,15 +1,39 @@
 .container {
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
 .welcome-text {
     margin-top: 50px;
+    margin-bottom: 50px;
     font-family: 'Waterfall', cursive;
     font-size: 80px;
     z-index: 1;
+}
+
+.time_and_place {
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(150, 164, 152);
+    color: white;
+    padding: 0.5em;
+    font-size: 22px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .timer {
@@ -23,9 +47,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
-    margin: 2%;
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  
+    -webkit-mask-size: 100% 100%;
+     mask-size: 100% 100%;
 }
 
 .collage-item-1 {
@@ -73,18 +105,25 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    filter: grayscale(100%); /* Apply black-and-white effect */
-    transition: filter 0.3s ease; /* Smooth transition to color */
+    filter: grayscale(100%);
+    /* Apply black-and-white effect */
+    transition: filter 0.3s ease;
+    /* Smooth transition to color */
 }
 
 img:hover {
-    filter: grayscale(0%); /* Remove grayscale on hover */
-  }
+    filter: grayscale(0%);
+    /* Remove grayscale on hover */
+}
 
 @media (max-width: 1200px) {
     .welcome-text {
         margin-top: 50px;
         font-size: 70px;
+    }
+
+    .time_and_place {
+        font-size: 20px;
     }
 
     .timer {
@@ -99,6 +138,15 @@ img:hover {
         font-size: 65px;
     }
 
+    .time_and_place {
+        font-size: 18px;
+    }
+
+    .dot {
+        height: 4px;
+        width: 4px;
+    }
+
     .timer {
         margin-top: 30px;
     }
@@ -107,8 +155,12 @@ img:hover {
 
 @media (max-width: 800px) {
     .welcome-text {
-        margin-top: 70px;
+        margin-top: 60px;
         font-size: 52px;
+    }
+
+    .time_and_place {
+        font-size: 16px;
     }
 
     .timer {
@@ -118,8 +170,18 @@ img:hover {
 
 @media (max-width: 600px) {
     .welcome-text {
-        margin-top: 60px;
+        margin-top: 50px;
+        margin-bottom: 30px;
         font-size: 38px;
+    }
+
+    .time_and_place {
+        font-size: 12px;
+    }
+
+    .dot {
+        height: 3px;
+        width: 3px;
     }
 
     .timer {
@@ -131,6 +193,10 @@ img:hover {
     .welcome-text {
         margin-top: 50px;
         font-size: 35px;
+    }
+
+    .time_and_place {
+        font-size: 10px;
     }
 
     .timer {
