@@ -16,7 +16,6 @@ export class HomeComponent {
   }
 
   public showImage(image: HTMLImageElement): void {
-    console.log('Shooting');
     this.enlargedImageSrc = image.src;
     this.isImageVisible = true;
   }

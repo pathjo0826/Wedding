@@ -1,3 +1,1 @@
 1. Fading along vertical edges
-2. Implement 'Modal'
-3. Add 'Our story' in images. Set text boxes with date overlaid on images.
