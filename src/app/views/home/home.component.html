@@ -10,56 +10,62 @@
 
     <div class="our-story">
         <div class="our-story-headline">OUR STORY</div>
-        <p class="our-story-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id reprehenderit culpa veniam, totam aliquid
+        <p class="our-story-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id reprehenderit
+            culpa veniam, totam aliquid
             perferendis doloribus alias vel sapiente quibusdam ipsum accusamus ullam deleniti sunt explicabo excepturi
             ips cum corporis incidunt atque eveniet? Ducimus, dicta consectetur? Accusantium atque similique magni
             blanditiis, excepturi non maiores ab necessitatibus fugiat, tempora sed et voluptates reiciendis eius minima
             fugit ducimus porro facilis totam quidem. Modi nihil, assumenda consequatur magnam itaque, dolor, deserunt
-            ut qui
-            necessitatibus consectetur enim. Cum eum exercitationem ut dolor obcaecati qui dicta, officia voluptatum!
+            ut qui necessitatibus consectetur enim. Cum eum exercitationem ut dolor obcaecati qui dicta, officia
+            voluptatum!
             Modi, beatae consectetur, sint quasi dolorum enim repudiandae necessitatibus quibusdam in ipsum doloremque
             maxime
             quae nobis.</p>
     </div>
 
     <div class="collage-container">
-        <div class="collage-item-1">
-            <img src="assets/images/ratio1-1/picture14-1_1.jpg">
-            <div class="overlay-text-1_1">Dec 2022</div>
+        <div class="collage-item-1" (click)="showImage(collageItem1)">
+            <img #collageItem1 src="assets/images/ratio1-1/picture5-1_1.jpg">
+            <div class="overlay-text-1_1">Dec 2023</div>
         </div>
 
-        <div class="collage-item-2">
-            <img src="assets/images/ratio1-1/picture12-1_1.jpg">
+        <div class="collage-item-2" (click)="showImage(collageItem2)">
+            <img #collageItem2 src="assets/images/ratio1-1/picture12-1_1.jpg">
             <div class="overlay-text-1_1">May 2023</div>
         </div>
 
-        <div class="collage-item-3">
-            <img src="assets/images/ratio9-16/picture10-9_16.jpg">
+        <div class="collage-item-3" (click)="showImage(collageItem3)">
+            <img #collageItem3 src="assets/images/ratio9-16/picture10-9_16.jpg">
             <div class="overlay-text-9_16">Aug 2023</div>
         </div>
 
-        <div class="collage-item-4">
-            <img src="assets/images/ratio9-16/picture6-9_16.jpg">
+        <div class="collage-item-4" (click)="showImage(collageItem4)">
+            <img #collageItem4 src="assets/images/ratio9-16/picture6-9_16.jpg">
             <div class="overlay-text-9_16">Dec 2023</div>
         </div>
 
-        <div class="collage-item-5">
-            <img src="assets/images/ratio9-16/picture21-9_16.jpg">
-            <div class="overlay-text-9_16">Dec 2023</div>
+        <div class="collage-item-5" (click)="showImage(collageItem5)">
+            <img #collageItem5 src="assets/images/ratio9-16/picture18-9_16.jpg">
+            <div class="overlay-text-9_16">Feb 2023</div>
         </div>
 
-        <div class="collage-item-6">
-            <img src="assets/images/ratio9-16/picture21-9_16.jpg">
+        <div class="collage-item-6" (click)="showImage(collageItem6)">
+            <img #collageItem6 src="assets/images/ratio9-16/picture17-9_16.jpg">
+            <div class="overlay-text-9_16">Sept 2024</div>
         </div>
 
-        <div class="collage-item-7">
-            <img src="assets/images/ratio1-1/picture8-1_1.jpg">
+        <div class="collage-item-7" (click)="showImage(collageItem7)">
+            <img #collageItem7 src="assets/images/ratio1-1/picture8-1_1.jpg">
             <div class="overlay-text-1_1">July 2024</div>
         </div>
 
-        <div class="collage-item-8">
-            <img src="assets/images/ratio1-1/picture16-1_1.jpg">
-            <div class="overlay-text-1_1">Sep 2024</div>
+        <div class="collage-item-8" (click)="showImage(collageItem8)">
+            <img #collageItem8 src="assets/images/ratio1-1/picture14-1_1.jpg">
+            <div class="overlay-text-1_1">Dec 2022</div>
         </div>
+    </div>
+    <div class="image-overlay" *ngIf="isImageVisible" (click)="hideImage()">
+        <img [src]="enlargedImageSrc">
     </div>
 </div>
