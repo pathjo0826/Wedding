@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { FirebaseService } from 'src/app/service/firebase.service';
 
 @Component({
   selector: 'app-rsvp',
@@ -10,27 +11,21 @@ export class RsvpComponent {
 
   validName: boolean;
 
-  constructor(private http: HttpClient) {
+  constructor(private firebaseService: FirebaseService) {
     this.validName = true;
   }
 
-  addGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: any) {
-   
-    console.log(guest);
-    
+  addGuest(guest: {name: string, plusOne: string, additional: string}, guestForm: NgForm) {
     try {
       this.validateName(guest.name);
-      const url = 'https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/guests.json';
-      this.http.post(url, guest).subscribe((resp) => {
-        console.log(resp);
-      })
-
+      this.firebaseService.addGuest(guest).subscribe();
+      
       this.validName = true;
       guestForm.reset();
 
     } catch (error) {
       this.validName = false;
-      console.log('Invalid name')
+      console.error("Adding a Guest failed: " + error);
     }
   }
 
