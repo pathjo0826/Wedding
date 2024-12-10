@@ -1,3 +1,12 @@
 <div class="container">
-    registry works!
+    <h2>Wedding registry</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cum ullam iste neque nam nulla modi mollitia
+        perspiciatis, quisquam porro quo eius repellat doloremque libero alias dolorum laboriosam veritatis beatae
+        officia atque! Quod voluptas qui ut odio placeat veritatis impedit recusandae labore laboriosam doloribus
+        laborum deserunt, debitis possimus, veniam unde.</p>
+    <ul>
+        <li *ngFor="let gift of giftList">{{gift.name}} - {{gift.link}} - {{gift.claimed}}</li>
+    </ul>
+
+    <div class="test-button" (click)="updateGiftStatus()">UPDATE</div>
 </div>
