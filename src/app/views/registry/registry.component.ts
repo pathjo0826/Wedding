@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Gift } from 'src/app/domain/gift';
+import { FirebaseService } from 'src/app/service/firebase.service';
 
 @Component({
   selector: 'app-registry',
@@ -12,13 +13,19 @@ export class RegistryComponent implements OnInit {
 
   giftList: Gift[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private firebaseService: FirebaseService) {}
 
   ngOnInit(): void {
     this.fetchGifts()
   }
 
   fetchGifts() {
+    this.firebaseService.fetchGifts().subscribe((gifts) => {
+      this.giftList = gifts;
+    })
+  }
+
+  fetchGifts_old() {
 
     try {
       const url = 'https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/gifts.json';
@@ -40,7 +47,7 @@ export class RegistryComponent implements OnInit {
     const path = "gifts/gift_2";
     const data = { claimed: false };
 
-    this.myUpdate(path, data).subscribe(() => {
+    this.firebaseService.updateClaim(path, data).subscribe(() => {
       try {
         console.log("Update successful");
         this.ngOnInit();
@@ -49,11 +56,5 @@ export class RegistryComponent implements OnInit {
         console.error("Update failed", error);
       }
     })
-  }
-
-  myUpdate(path: string, data: any): Observable<any> {
-    const databaseUrl = "https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/";
-    const url = `${databaseUrl}/${path}.json`;
-    return this.http.patch(url, data);
   }
 }
