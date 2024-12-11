@@ -5,8 +5,7 @@
         officia atque! Quod voluptas qui ut odio placeat veritatis impedit recusandae labore laboriosam doloribus
         laborum deserunt, debitis possimus, veniam unde.</p>
     <ul>
-        <li *ngFor="let gift of giftList">{{gift.name}} - {{gift.link}} - {{gift.claimed}}</li>
+        <li *ngFor="let gift of giftList">{{gift.name}} - {{gift.link}} - {{gift.claimed}} <button
+                (click)="updateGiftStatus(gift)">Update</button></li>
     </ul>
-
-    <div class="test-button" (click)="updateGiftStatus()">UPDATE</div>
 </div>

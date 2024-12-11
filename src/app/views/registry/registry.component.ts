@@ -23,14 +23,17 @@ export class RegistryComponent implements OnInit {
     })
   }
 
-  updateGiftStatus() {
+  updateGiftStatus(gift: Gift) {
 
-    const path = "gifts/gift_1";
-    const data = { claimed: false };
+    // Construct the path dynamically based on gift's id
+    const path = `gifts/gift_${gift.id}`;
+
+    // Toggle claimed variable true/false
+    const data = { claimed: !gift.claimed }; 
 
     this.firebaseService.updateClaim(path, data).subscribe(() => {
       try {
-        console.log("Update successful");
+        console.log("Update: " + path + " successful");
         this.ngOnInit();
 
       } catch (error) {
