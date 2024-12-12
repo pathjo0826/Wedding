@@ -22,7 +22,7 @@ export class FirebaseService {
     }));
   }
 
-  updateClaim(path: string, data: any): Observable<any> {
+   updateClaim(path: string, data: any): Observable<any> {
 
     const databaseUrl = "https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/";
     const url = databaseUrl + "/" + path + ".json";

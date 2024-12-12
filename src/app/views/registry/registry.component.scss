@@ -3,6 +3,53 @@
     margin: 2em;
 }
 
+.columns {
+    column-count: 3;
+    column-gap: 20px;
+    height: 80vh;
+    overflow-y: auto; /* Allow scrolling for overflow */
+    column-fill: auto;
+    //width: 100%;
+}
+
+table {
+    width: 100%;
+    //border-collapse: collapse;
+}
+
+.headline {
+    background-color: rgb(150, 164, 152);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 5px;
+}
+
+.claim-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.claim-button {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    padding: 2px;
+    font-size: 12px;
+
+    background-color: rgb(150, 164, 152);
+    color: white;
+    border-radius: 5px;
+}
+
+.claim-button:hover {
+    cursor: pointer;
+}
+
 .test-button {
     width: 80px;
     height: 20px;

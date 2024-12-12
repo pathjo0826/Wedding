@@ -1,11 +1,45 @@
 <div class="container">
-    <h2>Wedding registry</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cum ullam iste neque nam nulla modi mollitia
-        perspiciatis, quisquam porro quo eius repellat doloremque libero alias dolorum laboriosam veritatis beatae
-        officia atque! Quod voluptas qui ut odio placeat veritatis impedit recusandae labore laboriosam doloribus
-        laborum deserunt, debitis possimus, veniam unde.</p>
-    <ul>
-        <li *ngFor="let gift of giftList">{{gift.name}} - {{gift.link}} - {{gift.claimed}} <button
-                (click)="updateGiftStatus(gift)">Update</button></li>
-    </ul>
+    <h2>REGISTRY</h2>
+    <div class="columns">
+        <div class="headline">Kitchen stuff</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of giftList" [ngStyle]="{'color': gift.claimed ? 'black' : 'gray'}">
+                    <td [ngStyle]="{'text-decoration': gift.claimed ? 'none' : 'line-through'}">{{gift.name}}</td>
+                    <td>
+                        <div class="claim-button-container">
+                            <div class="claim-button" (click)="updateGiftStatus(gift)">{{ gift.claimed ? 'Claim' : 'Release' }}</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="headline">Bedroom stuff</div>
+        <ul>
+            <li>Test 1</li>
+            <li>Test 2</li>
+            <li>Test 3</li>
+            <li>Test 4</li>
+            <li>Test 5</li>
+            <li>Test 6</li>
+            <li>Test 7</li>
+            <li>Test 8</li>
+            <li>Test 9</li>
+            <li>Test 10</li>
+            <li>Test 11</li>
+            <li>Test 12</li>
+        </ul>
+        <div class="headline">Tools</div>
+        <ul>
+            <li>Test 1</li>
+            <li>Test 2</li>
+            <li>Test 3</li>
+            <li>Test 4</li>
+            <li>Test 5</li>
+            <li>Test 5</li>
+            <li>Test 6</li>
+            <li>Test 7</li>
+            <li>Test 8</li>
+        </ul>
+    </div>
 </div>
