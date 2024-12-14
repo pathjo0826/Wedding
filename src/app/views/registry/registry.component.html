@@ -1,15 +1,17 @@
+<div class="page-headline">REGISTRY</div>
 <div class="container">
-    <h2>REGISTRY</h2>
     <div class="columns">
         <div class="headline">Kitchen stuff</div>
         <table>
             <tbody>
-                <tr *ngFor="let gift of giftList" [ngStyle]="{'color': gift.claimed ? 'black' : 'gray'}">
-                    <td [ngStyle]="{'text-decoration': gift.claimed ? 'none' : 'line-through'}">{{gift.name}}</td>
+                <tr *ngFor="let gift of giftList">
                     <td>
-                        <div class="claim-button-container">
-                            <div class="claim-button" (click)="updateGiftStatus(gift)">{{ gift.claimed ? 'Claim' : 'Release' }}</div>
-                        </div>
+                        <button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button>
+                    </td>
+                    <td [ngStyle]="{
+                            'text-decoration': gift.claimed ? 'line-through' : 'none', 
+                            'color': gift.claimed ? 'gray' : 'black'}">
+                        {{gift.name}}
                     </td>
                 </tr>
             </tbody>
