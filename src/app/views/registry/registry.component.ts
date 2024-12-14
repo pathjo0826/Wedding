@@ -11,7 +11,7 @@ export class RegistryComponent implements OnInit {
 
   giftList: Gift[] = [];
 
-  constructor(private firebaseService: FirebaseService) {}
+  constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit(): void {
     this.fetchGifts()
@@ -23,13 +23,26 @@ export class RegistryComponent implements OnInit {
     })
   }
 
+  sortGifts(category: string) {
+    let categoryGifts: Gift[] = [];
+    
+    this.giftList.forEach((gift) => {
+      
+      if (gift.category === category) {
+        categoryGifts.push(gift);
+      }
+    }
+  )
+  return categoryGifts;
+  }
+
   updateGiftStatus(gift: Gift) {
 
     // Construct the path dynamically based on gift's id
     const path = `gifts/gift_${gift.id}`;
 
     // Toggle claimed variable true/false
-    const data = { claimed: !gift.claimed }; 
+    const data = { claimed: !gift.claimed };
 
     this.firebaseService.updateClaim(path, data).subscribe(() => {
       try {

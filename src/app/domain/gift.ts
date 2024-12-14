@@ -4,11 +4,13 @@ export class Gift {
     name: string;
     link: string;
     claimed: boolean;
+    category: string;
 
-    constructor(id: number, name: string, link: string, claimed: boolean) {
+    constructor(id: number, name: string, link: string, claimed: boolean, category: string) {
         this.id = id;
         this.name = name;
         this.link = link;
         this.claimed = claimed;
+        this.category = category;
     }
 }

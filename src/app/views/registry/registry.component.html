@@ -1,13 +1,11 @@
 <div class="page-headline">REGISTRY</div>
 <div class="container">
     <div class="columns">
-        <div class="headline">Kitchen stuff</div>
+        <div class="headline">Category 1</div>
         <table>
             <tbody>
-                <tr *ngFor="let gift of giftList">
-                    <td>
-                        <button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button>
-                    </td>
+                <tr *ngFor="let gift of sortGifts('1')">
+                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
                     <td [ngStyle]="{
                             'text-decoration': gift.claimed ? 'line-through' : 'none', 
                             'color': gift.claimed ? 'gray' : 'black'}">
@@ -16,32 +14,31 @@
                 </tr>
             </tbody>
         </table>
-        <div class="headline">Bedroom stuff</div>
-        <ul>
-            <li>Test 1</li>
-            <li>Test 2</li>
-            <li>Test 3</li>
-            <li>Test 4</li>
-            <li>Test 5</li>
-            <li>Test 6</li>
-            <li>Test 7</li>
-            <li>Test 8</li>
-            <li>Test 9</li>
-            <li>Test 10</li>
-            <li>Test 11</li>
-            <li>Test 12</li>
-        </ul>
-        <div class="headline">Tools</div>
-        <ul>
-            <li>Test 1</li>
-            <li>Test 2</li>
-            <li>Test 3</li>
-            <li>Test 4</li>
-            <li>Test 5</li>
-            <li>Test 5</li>
-            <li>Test 6</li>
-            <li>Test 7</li>
-            <li>Test 8</li>
-        </ul>
+        <div class="headline">Category 2</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('2')">
+                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
+                    <td [ngStyle]="{
+                        'text-decoration': gift.claimed ? 'line-through' : 'none', 
+                        'color': gift.claimed ? 'gray' : 'black'}">
+                    {{gift.name}}
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="headline">Category 3</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('3')">
+                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
+                    <td [ngStyle]="{
+                        'text-decoration': gift.claimed ? 'line-through' : 'none', 
+                        'color': gift.claimed ? 'gray' : 'black'}">
+                    {{gift.name}}
+                </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
