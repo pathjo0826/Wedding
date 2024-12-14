@@ -1,3 +1,15 @@
+.page-headline {
+    background-color: rgb(150, 164, 152);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+}
+
 .container {
     height: 100vh;
     margin: 2em;
@@ -45,7 +57,21 @@ label {
     color: white;
 }
 
+@media (max-width: 1200px) {
+
+}
+
 @media (max-width: 1000px) {
+
+    .page-headline {
+        font-size: 26px;
+    }
+
+    
+    label {
+        font-size: 16px;
+    }
+
     .form {
         width: 300px;
         height: auto;
@@ -56,7 +82,23 @@ label {
     }
 }
 
+@media (max-width: 800px) {
+
+    .page-headline {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 600px) {
+
+    .page-headline {
+        font-size: 18px;
+    }
+
     .form {
         width: 200px;
         height: auto;
@@ -67,11 +109,16 @@ label {
     }
 
     label {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 450px) {
+
+    .page-headline {
+        font-size: 16px;
+    }
+
     .form {
         width: 150px;
         height: auto;

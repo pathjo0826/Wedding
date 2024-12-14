@@ -1,8 +1,3 @@
-.container {
-    height: 100vh;
-    margin: 2em;
-}
-
 .page-headline {
     background-color: rgb(150, 164, 152);
     color: white;
@@ -13,6 +8,11 @@
     width: 100%;
     padding: 5px;
     margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    margin: 2em;
 }
 
 .columns {
@@ -103,12 +103,20 @@ td {
 
 @media (max-width: 1000px) {
 
+    .page-headline {
+        font-size: 26px;
+    }
+
     td {
         padding-left: 20px;
     }
 }
 
 @media (max-width: 800px) {
+
+    .page-headline {
+        font-size: 22px;
+    }
 
     .headline {
         font-size: 16px;
@@ -127,6 +135,10 @@ td {
 
 @media (max-width: 600px) {
 
+    .page-headline {
+        font-size: 18px;
+    }
+
     .headline {
         font-size: 14px;
     }
@@ -143,6 +155,10 @@ td {
 }
 
 @media (max-width: 450px) {
+
+    .page-headline {
+        font-size: 16px;
+    }
 
     td {
         padding-left: 10px;
