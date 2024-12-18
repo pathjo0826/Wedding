@@ -16,7 +16,7 @@
 }
 
 .columns {
-    column-count: 3;
+    column-count: 2;
     column-gap: 20px;
     height: 80vh;
     overflow-y: auto; /* Allow scrolling for overflow */
@@ -40,6 +40,10 @@ table {
     padding: 3px;
     font-size: 18px;
 }
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
 
 .td-button {
     width: 20px;
@@ -87,6 +91,11 @@ td {
 
 .button:hover {
     transform: scale(1.1);
+}
+
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 
