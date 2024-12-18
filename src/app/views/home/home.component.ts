@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimerComponent } from 'src/app/components/timer/timer.component';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,10 @@ export class HomeComponent {
 
   isImageVisible: boolean;
   enlargedImageSrc: string;
+  timer: TimerComponent;
 
   constructor() {
+    this.timer = new TimerComponent();
     this.isImageVisible = false;
     this.enlargedImageSrc = '';
   }

@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss']
+})
+@Injectable({
+  providedIn: 'root', // Makes it available app-wide
 })
 export class TimerComponent {
 

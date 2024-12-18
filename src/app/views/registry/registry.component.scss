@@ -43,6 +43,7 @@ table {
 
 tr:nth-child(odd) {
     background-color: #f2f2f2;
+    //background-color: rgb(150, 164, 152);
   }
 
 .td-button {
@@ -57,8 +58,9 @@ td {
 .button {
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    border-radius: 0%;
     border: 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     
     /* Removes any margin that could affect dimensions */
     padding: 0;
@@ -128,7 +130,6 @@ a:link, a:visited {
     }
 
     .columns {
-        column-count: 2;
         column-gap: 15px;
     }
 
@@ -151,6 +152,10 @@ a:link, a:visited {
 
     .page-headline {
         font-size: 18px;
+    }
+
+    .columns {
+        column-count: 1;
     }
 
     .headline {
