@@ -5,10 +5,12 @@
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('1')">
-                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
-                    <td [ngStyle]="{
-                            'text-decoration': gift.claimed ? 'line-through' : 'none', 
-                            'color': gift.claimed ? 'gray' : 'black'}">
+                    <td class="td-button">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
                         {{gift.name}}
                     </td>
                 </tr>
@@ -18,12 +20,14 @@
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('2')">
-                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
-                    <td [ngStyle]="{
-                        'text-decoration': gift.claimed ? 'line-through' : 'none', 
-                        'color': gift.claimed ? 'gray' : 'black'}">
-                    {{gift.name}}
-                </td>
+                    <td class="td-button">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        {{gift.name}}
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -31,12 +35,14 @@
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('3')">
-                    <td class="td-button"><button class="button" (click)="updateGiftStatus(gift)" [class.ticked]="gift.claimed"></button></td>
-                    <td [ngStyle]="{
-                        'text-decoration': gift.claimed ? 'line-through' : 'none', 
-                        'color': gift.claimed ? 'gray' : 'black'}">
-                    {{gift.name}}
-                </td>
+                    <td class="td-button">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        {{gift.name}}
+                    </td>
                 </tr>
             </tbody>
         </table>

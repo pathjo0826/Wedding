@@ -118,6 +118,11 @@ td {
         font-size: 22px;
     }
 
+    .columns {
+        column-count: 2;
+        column-gap: 15px;
+    }
+
     .headline {
         font-size: 16px;
     }

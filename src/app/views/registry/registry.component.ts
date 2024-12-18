@@ -20,6 +20,7 @@ export class RegistryComponent implements OnInit {
   fetchGifts() {
     this.firebaseService.fetchGifts().subscribe((gifts) => {
       this.giftList = gifts;
+      console.log(this.giftList);
     })
   }
 
@@ -46,6 +47,7 @@ export class RegistryComponent implements OnInit {
 
     this.firebaseService.updateClaim(path, data).subscribe(() => {
       try {
+
         console.log("Update: " + path + " successful");
         this.ngOnInit();
 
@@ -53,5 +55,13 @@ export class RegistryComponent implements OnInit {
         console.error("Update failed", error);
       }
     });
+  }
+
+  getGiftStyle(gift: {claimed: boolean}) {
+    
+    return {
+      'text-decoration': gift.claimed ? 'line-through' : 'none',
+      'color': gift.claimed ? 'gray' : 'black',
+    };
   }
 }
