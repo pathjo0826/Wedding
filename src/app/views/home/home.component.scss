@@ -330,11 +330,12 @@
     }
 
     .our-story-text {
-        font-size: 6px;
+        font-size: 7px;
     }
 
     .our-story-text::first-letter {
-        font-size: 15px;
+        font-size: 18px;
+        column-gap: 6px;
     }
 
     .overlay-text-1_1 {
