@@ -1,3 +1,4 @@
-1. "The Wedding" - Here goes information about the wedding, place & time. This could be expanded into a finer schedule later on.
+1. "About" - Information about location, boat trip and venue.
+1. "The Wedding" (or "Schedule") - Time schedule.
 2. "FAQ" - Accomodation, transportation, clothes, gifts, contact info, allergies etc.
 3. "RSVP" - Modify to Production-READY
