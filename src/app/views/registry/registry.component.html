@@ -31,6 +31,21 @@
                 </tr>
             </tbody>
         </table>
+        <div class="headline">Bathroom</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('bathroom')">
+                    <td class="td-button">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>  
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <div class="headline">Experience</div>
         <table>
             <tbody>

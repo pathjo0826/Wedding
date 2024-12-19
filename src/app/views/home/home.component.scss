@@ -1,14 +1,11 @@
-.container {
-    align-items: center;
-    text-align: center;
-}
-
 .welcome-text {
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Waterfall', cursive;
     font-size: 80px;
-    z-index: 1;
+
+    align-items: center;
+    text-align: center;
 }
 
 .time-and-place {
@@ -41,8 +38,25 @@
 }
 
 .our-story-text {
+    margin: 2em;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 15px;
+
+    column-count: 2;
+    column-gap: 20px;
+    column-fill: balance;
+    overflow-y: auto;
+}
+
+.our-story-text::first-letter {
+    /* Make the first letter larger */
+    font-size: 36px; 
+    /* Align it to the left of the text */
+    float: left; 
+    /* Add a bit of spacing to the right */
+    margin-right: 0.15em; 
+    /* Align with the paragraph's lines */
+    line-height: 1; 
 }
 
 .collage-container {
@@ -51,7 +65,7 @@
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 3%;
     grid-row-gap: 3%;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -204,6 +218,15 @@
         width: 4px;
     }
 
+    .our-story-text {
+        font-size: 12px;
+        column-gap: 18px;
+    }
+
+    .our-story-text::first-letter {
+        font-size: 30px;
+    }
+
     .overlay-text-1_1 {
         font-size: 12px;
     }
@@ -229,8 +252,13 @@
     }
 
     .our-story-text {
-        font-size: 12px;
-        margin-top: 4px;
+        font-size: 10px;
+        column-gap: 12px;
+        margin-top: 10px;
+    }
+
+    .our-story-text::first-letter {
+        font-size: 25px;
     }
 
     .overlay-text-1_1 {
@@ -264,13 +292,18 @@
         width: 3px;
     }
 
-    .our-story-text {
-        font-size: 10px;
-    }
-
     .our-story-headline {
         margin-top: 15px;
         font-size: 18px;
+    }
+
+    .our-story-text {
+        font-size: 8px;
+        column-gap: 8px;
+    }
+
+    .our-story-text::first-letter {
+        font-size: 20px;
     }
 
     .overlay-text-1_1 {
@@ -292,12 +325,16 @@
         font-size: 10px;
     }
 
-    .our-story {
-        font-size: 8px;
-    }
-
     .our-story-headline {
         font-size: 14px;
+    }
+
+    .our-story-text {
+        font-size: 6px;
+    }
+
+    .our-story-text::first-letter {
+        font-size: 15px;
     }
 
     .overlay-text-1_1 {
