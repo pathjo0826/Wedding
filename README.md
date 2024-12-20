@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To build for re-deployment run `ng build --configuration=production --base-href https://pathjo0826.github.io/Wedding/`
 
-TROUBLESHOOTING ALTERNATIVE: `ng build --configuration=production --base-href "/"`
+TROUBLESHOOTING ALTERNATIVE: `ng build --configuration=production --base-href=/`
 
 ## Deploy
 
