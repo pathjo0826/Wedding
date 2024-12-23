@@ -1,4 +1,4 @@
 1. "About" - Information about location, boat trip and venue.
 1. "The Wedding" (or "Schedule") - Time schedule.
-2. "FAQ" - Accomodation, transportation, clothes, gifts, contact info, allergies etc.
+2. "FAQ" - Accomodation, transportation, contact info, speaches, allergies (kolla med restaurangen hur de hanterar det) etc.
 3. "RSVP" - Modify to Production-READY

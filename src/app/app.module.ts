@@ -17,6 +17,8 @@ import { ErrorComponent } from './views/error/error.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { RsvpComponent } from './views/rsvp/rsvp.component';
 import { RegistryComponent } from './views/registry/registry.component';
+import { FaqComponent } from './views/faq/faq.component';
+import { EmailDisplayComponent } from './components/email-display/email-display.component';
 
 
 const appRoutes: Routes = [
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
   {path: 'Home', component: HomeComponent},
   {path: 'About', component: AboutComponent},
   {path: 'Schedule', component: ScheduleComponent},
-  {path: 'Registry', component: RegistryComponent}, 
+  {path: 'Registry', component: RegistryComponent},
+  {path: 'FAQ', component: FaqComponent}, 
   {path: 'Contact', component: ContactComponent},
   {path: 'Rsvp', component: RsvpComponent},
   {path: '**', component: ErrorComponent} 
@@ -40,7 +43,9 @@ const appRoutes: Routes = [
     ErrorComponent,
     TimerComponent,
     RsvpComponent,
-    RegistryComponent
+    RegistryComponent,
+    FaqComponent,
+    EmailDisplayComponent
   ],
   imports: [
     BrowserModule,
