@@ -7,6 +7,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
+import { initializeApp } from 'firebase/app';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check';
 
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
@@ -59,4 +61,16 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    // Initialize Firebase App
+    const app = initializeApp(environment.firebase);
+
+    // Initialize App Check with reCAPTCHA Enterprise
+    initializeAppCheck(app, {
+      provider: new ReCaptchaEnterpriseProvider('6LeVw6YqAAAAAMSHu5q94FNCOdQgnV48JjOidVRE'),
+      isTokenAutoRefreshEnabled: true,
+    });
+  }
+
+}
