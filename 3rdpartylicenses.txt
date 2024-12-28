@@ -60,6 +60,9 @@ Apache-2.0
 @firebase/component
 Apache-2.0
 
+@firebase/database
+Apache-2.0
+
 @firebase/firestore
 Apache-2.0
 
@@ -84,6 +87,8 @@ firebase/compat/app
 firebase/compat/auth
 
 firebase/compat/firestore
+
+firebase/database
 
 idb
 ISC
