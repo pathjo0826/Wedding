@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
-import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider, ReCaptchaV3Provider } from 'firebase/app-check';
 
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
@@ -24,15 +24,15 @@ import { EmailDisplayComponent } from './components/email-display/email-display.
 
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: 'Home', pathMatch: 'full'},
-  {path: 'Home', component: HomeComponent},
-  {path: 'About', component: AboutComponent},
-  {path: 'Schedule', component: ScheduleComponent},
-  {path: 'Registry', component: RegistryComponent},
-  {path: 'FAQ', component: FaqComponent}, 
-  {path: 'Contact', component: ContactComponent},
-  {path: 'Rsvp', component: RsvpComponent},
-  {path: '**', component: ErrorComponent} 
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent },
+  { path: 'About', component: AboutComponent },
+  { path: 'Schedule', component: ScheduleComponent },
+  { path: 'Registry', component: RegistryComponent },
+  { path: 'FAQ', component: FaqComponent },
+  { path: 'Contact', component: ContactComponent },
+  { path: 'Rsvp', component: RsvpComponent },
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
@@ -61,16 +61,25 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor() {
     // Initialize Firebase App
     const app = initializeApp(environment.firebase);
 
-    // Initialize App Check with reCAPTCHA Enterprise
-    initializeAppCheck(app, {
-      provider: new ReCaptchaEnterpriseProvider('6LeVw6YqAAAAAMSHu5q94FNCOdQgnV48JjOidVRE'),
-      isTokenAutoRefreshEnabled: true,
-    });
-  }
+    console.log("Initializing App Check...");
 
+    try {
+      // Initialize App Check with reCAPTCHA Enterprise
+      initializeAppCheck(app, {
+        provider: new ReCaptchaV3Provider('6LeVw6YqAAAAAMSHu5q94FNCOdQgnV48JjOidVRE'),
+        isTokenAutoRefreshEnabled: true,
+      });
+
+      console.log('App Check init OK');
+    } catch (error) {
+      console.log('App Check init failed,' + error);
+    }
+
+
+  }
 }
