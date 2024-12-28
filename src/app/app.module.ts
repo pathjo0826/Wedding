@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
-import { initializeAppCheck, ReCaptchaEnterpriseProvider, ReCaptchaV3Provider } from 'firebase/app-check';
+import { initializeAppCheck, ReCaptchaV3Provider, getToken } from 'firebase/app-check';
 
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
@@ -63,23 +63,33 @@ const appRoutes: Routes = [
 })
 export class AppModule {
   constructor() {
+
     // Initialize Firebase App
     const app = initializeApp(environment.firebase);
-
     console.log("Initializing App Check...");
 
     try {
-      // Initialize App Check with reCAPTCHA Enterprise
-      initializeAppCheck(app, {
+
+      // Initialize App Check with reCAPTCHAv3
+      const appCheck = initializeAppCheck(app, {
         provider: new ReCaptchaV3Provider('6LeVw6YqAAAAAMSHu5q94FNCOdQgnV48JjOidVRE'),
         isTokenAutoRefreshEnabled: true,
       });
 
-      console.log('App Check init OK');
+      console.log('AppCheck init OK');
+
+      getToken(appCheck, true).then((token: any) => {
+        
+        // Saves token in localstorage
+        localStorage.setItem('firebaseAppCheckToken', token.token);
+        console.log("AppCheck Token:", token);
+
+      }).catch((error: any) => {
+        console.error("AppCheck Error:", error);
+      });
+
     } catch (error) {
-      console.log('App Check init failed,' + error);
+      console.log('AppCheck init failed,' + error);
     }
-
-
   }
 }

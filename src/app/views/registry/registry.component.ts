@@ -15,6 +15,7 @@ export class RegistryComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchGifts()
+    //this.firebaseService.fetchGiftsFirebaseSDK();
   }
 
   fetchGifts() {
