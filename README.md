@@ -29,3 +29,7 @@ The Build and Deploy steps look slightly different. Use the following steps:
 1. Build command: `ng build --configuration=production --base-href=/`
 2. Deploy command: `npx angular-cli-ghpages --dir=dist/wedding-app` (same as before!)
 3. Go to Github Repository > Settings > Pages and add Custom Domain: `patrikandclaudia2025.com`
+
+## reCAPTCA console
+
+`https://www.google.com/recaptcha/admin/site/715572117`

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Gift } from 'src/app/domain/gift';
 import { FirebaseService } from 'src/app/service/firebase.service';
+import { GiftService } from 'src/app/service/gift.service';
 
 @Component({
   selector: 'app-registry',
@@ -10,32 +11,34 @@ import { FirebaseService } from 'src/app/service/firebase.service';
 export class RegistryComponent implements OnInit {
 
   giftList: Gift[] = [];
+  data: any;
 
-  constructor(private firebaseService: FirebaseService) { }
+  constructor(private firebaseService: FirebaseService, private giftService: GiftService) { }
 
-  ngOnInit(): void {
-    this.fetchGifts()
-    //this.firebaseService.fetchGiftsFirebaseSDK();
+  async ngOnInit() {
+    await this.fetchGifts();
+    //this.giftService.fetchGiftsHttp();
   }
 
-  fetchGifts() {
-    this.firebaseService.fetchGifts().subscribe((gifts) => {
-      this.giftList = gifts;
-      console.log(this.giftList);
-    })
+  async fetchGifts(): Promise<void> {
+    try {
+      this.giftList = await this.giftService.fetchGifts();
+    } catch (error) {
+      console.log('Error in fetching gift data', error);
+      throw error;
+    }
   }
 
   sortGifts(category: string) {
     let categoryGifts: Gift[] = [];
-    
+
     this.giftList.forEach((gift) => {
-      
+
       if (gift.category === category) {
         categoryGifts.push(gift);
       }
-    }
-  )
-  return categoryGifts;
+    });
+    return categoryGifts;
   }
 
   updateGiftStatus(gift: Gift) {
@@ -58,8 +61,8 @@ export class RegistryComponent implements OnInit {
     });
   }
 
-  getGiftStyle(gift: {claimed: boolean}) {
-    
+  getGiftStyle(gift: { claimed: boolean }) {
+
     return {
       'text-decoration': gift.claimed ? 'line-through' : 'none',
       'color': gift.claimed ? 'gray' : 'black',

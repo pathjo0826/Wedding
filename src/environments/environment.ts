@@ -3,6 +3,7 @@ export const environment = {
     firebase: {
       apiKey: "AIzaSyDWOb8hpZ7JQcpPzpcNw6SW53_pG0V5UE0",
       authDomain: "wedding-29b48.firebaseapp.com",
+      databaseURL: "https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app",
       projectId: "wedding-29b48",
       storageBucket: "wedding-29b48.firebasestorage.app",
       messagingSenderId: "807343676966",

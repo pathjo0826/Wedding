@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
 import { initializeAppCheck, ReCaptchaV3Provider, getToken } from 'firebase/app-check';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { enableLogging } from 'firebase/database';
 
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
@@ -21,7 +23,6 @@ import { RsvpComponent } from './views/rsvp/rsvp.component';
 import { RegistryComponent } from './views/registry/registry.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { EmailDisplayComponent } from './components/email-display/email-display.component';
-
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -47,7 +48,7 @@ const appRoutes: Routes = [
     RsvpComponent,
     RegistryComponent,
     FaqComponent,
-    EmailDisplayComponent
+    EmailDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,9 +57,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [provideDatabase(() => getDatabase())],
   bootstrap: [AppComponent]
 })
 export class AppModule {
@@ -66,7 +67,6 @@ export class AppModule {
 
     // Initialize Firebase App
     const app = initializeApp(environment.firebase);
-    console.log("Initializing App Check...");
 
     try {
 
