@@ -6,7 +6,7 @@
             <tbody>
                 <tr *ngFor="let gift of sortGifts('kitchen')">
                     <td class="td-button">
-                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatusNew(gift)"
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                             [class.ticked]="gift.claimed">
                         </button>
                     </td>
@@ -21,7 +21,7 @@
             <tbody>
                 <tr *ngFor="let gift of sortGifts('living-room')">
                     <td class="td-button">
-                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatusNew(gift)"
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                             [class.ticked]="gift.claimed">
                         </button>
                     </td>
@@ -36,7 +36,7 @@
             <tbody>
                 <tr *ngFor="let gift of sortGifts('bathroom')">
                     <td class="td-button">
-                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatusNew(gift)"
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                             [class.ticked]="gift.claimed">
                         </button>
                     </td>
@@ -51,7 +51,7 @@
             <tbody>
                 <tr *ngFor="let gift of sortGifts('experience')">
                     <td class="td-button">
-                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatusNew(gift)"
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                             [class.ticked]="gift.claimed">
                         </button>
                     </td>

@@ -13,7 +13,7 @@ export class RegistryComponent implements OnInit {
   giftList: Gift[] = [];
   data: any;
 
-  constructor(private firebaseService: FirebaseService, private giftService: GiftService) { }
+  constructor(private giftService: GiftService) { }
 
   async ngOnInit() {
     await this.fetchGifts();
@@ -41,6 +41,7 @@ export class RegistryComponent implements OnInit {
     return categoryGifts;
   }
 
+  /*
   updateGiftStatus(gift: Gift) {
 
     // Construct the path dynamically based on gift's id
@@ -60,8 +61,9 @@ export class RegistryComponent implements OnInit {
       }
     });
   }
+  */
 
-  async updateGiftStatusNew(gift: Gift) {
+  async updateGiftStatus(gift: Gift) {
 
     // Construct the path dynamically based on gift's id
     const path = `gifts/gift_${gift.id}`;

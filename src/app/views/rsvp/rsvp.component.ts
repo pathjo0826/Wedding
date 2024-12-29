@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FirebaseService } from 'src/app/service/firebase.service';
+import { RsvpService } from 'src/app/service/rsvp.service';
 
 @Component({
   selector: 'app-rsvp',
@@ -11,21 +12,22 @@ export class RsvpComponent {
 
   validName: boolean;
 
-  constructor(private firebaseService: FirebaseService) {
+  constructor(private rsvpService: RsvpService) {
     this.validName = true;
   }
 
-  addGuest(guest: {name: string, plusOne: string, additional: string}, guestForm: NgForm) {
+  async addGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: NgForm) {
+    
     try {
       this.validateName(guest.name);
-      this.firebaseService.addGuest(guest).subscribe();
-      
+      await this.rsvpService.addGuest(guest);
+
       this.validName = true;
       guestForm.reset();
 
     } catch (error) {
       this.validName = false;
-      console.error("Adding a Guest failed: " + error);
+      console.error("Update failed", error);
     }
   }
 

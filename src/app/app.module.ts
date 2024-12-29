@@ -82,12 +82,12 @@ export class AppModule {
         
         // Saves token in localstorage
         localStorage.setItem('firebaseAppCheckToken', token.token);
-        console.log("AppCheck Token:", token);
+        //console.log("AppCheck Token:", token);
 
       }).catch((error: any) => {
         console.error("AppCheck Error:", error);
       });
-
+ 
     } catch (error) {
       console.log('AppCheck init failed,' + error);
     }

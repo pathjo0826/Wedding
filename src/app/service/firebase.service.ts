@@ -12,10 +12,7 @@ export class FirebaseService {
 
   constructor(private http: HttpClient) { 
 
-    console.log('FirebaseService initialized');
-
     this.appCheckToken = localStorage.getItem('firebaseAppCheckToken');
-    
   }
 
   fetchGifts(): Observable<any> {

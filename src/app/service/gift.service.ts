@@ -1,35 +1,22 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { getDatabase, ref, get, Database, set, update } from 'firebase/database';
-import { Gift } from '../domain/gift';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GiftService {
 
-  //appCheckToken: string | null = null;
   database: Database;
 
   constructor(private http: HttpClient) {
     this.database = getDatabase();
-    //this.appCheckToken = localStorage.getItem('firebaseAppCheckToken');
-    //console.log('Token received in GiftService: ' + this.appCheckToken);
   }
 
-  /*
-  fetchGiftsHttp(): void {
-    console.log('Running HTTP...')
-
-    const headers = new HttpHeaders().set('X-Firebase-AppCheck', this.appCheckToken || '');
-    this.http.get('https://wedding-29b48-default-rtdb.europe-west1.firebasedatabase.app/gifts.json', {headers})
-      .subscribe(
-        data => console.log('Gifts:', data),
-        error => console.error('Error fetching data:', error)
-      );
-  }
-  */
-
+  /** 
+   * This method fetches all gifts from the database. It returns a list of gift objects. 
+   * @return list of Gift objects
+   * */
   async fetchGifts(): Promise<any> {
 
     const dbRef = ref(this.database, '/gifts');
@@ -53,10 +40,17 @@ export class GiftService {
     }
   }
 
+  /**
+   * Updates the 'claimed' boolean variable in the database of a specific gift object.
+   * @param relative path to the specific gift object
+   * @param boolean data to be set to
+   */
   async updateClaim(path: string, data: boolean): Promise<any> {
+    
+    const dbRef = ref(this.database, path);
 
     try {
-      const dbRef = ref(this.database, path);
+      
       await update(dbRef, { claimed: data });
       console.log(`Gift ${path} 'claimed' status updated to: ${data}`);
 
