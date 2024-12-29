@@ -1,19 +1,23 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { getDatabase, ref, get } from 'firebase/database';
+import { getDatabase, ref, get, Database, set, update } from 'firebase/database';
+import { Gift } from '../domain/gift';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GiftService {
 
-  appCheckToken: string | null = null;
+  //appCheckToken: string | null = null;
+  database: Database;
 
   constructor(private http: HttpClient) {
-    this.appCheckToken = localStorage.getItem('firebaseAppCheckToken');
-    console.log('Token received in GiftService: ' + this.appCheckToken);
+    this.database = getDatabase();
+    //this.appCheckToken = localStorage.getItem('firebaseAppCheckToken');
+    //console.log('Token received in GiftService: ' + this.appCheckToken);
   }
 
+  /*
   fetchGiftsHttp(): void {
     console.log('Running HTTP...')
 
@@ -24,11 +28,11 @@ export class GiftService {
         error => console.error('Error fetching data:', error)
       );
   }
+  */
 
   async fetchGifts(): Promise<any> {
 
-    const database = getDatabase();
-    const dbRef = ref(database, '/gifts');
+    const dbRef = ref(this.database, '/gifts');
 
     try {
       const snapshot = await get(dbRef); // Await the `get` call
@@ -45,8 +49,19 @@ export class GiftService {
       return gifts;
 
     } catch (error) {
-      console.log('Shit goes wrong here?')
       console.error('Error fetching data:', error);
+    }
+  }
+
+  async updateClaim(path: string, data: boolean): Promise<any> {
+
+    try {
+      const dbRef = ref(this.database, path);
+      await update(dbRef, { claimed: data });
+      console.log(`Gift ${path} 'claimed' status updated to: ${data}`);
+
+    } catch (error) {
+      console.error('Error updating gift status:', error);
     }
   }
 }

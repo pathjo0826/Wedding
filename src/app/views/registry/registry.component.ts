@@ -17,14 +17,13 @@ export class RegistryComponent implements OnInit {
 
   async ngOnInit() {
     await this.fetchGifts();
-    //this.giftService.fetchGiftsHttp();
   }
 
   async fetchGifts(): Promise<void> {
     try {
       this.giftList = await this.giftService.fetchGifts();
     } catch (error) {
-      console.log('Error in fetching gift data', error);
+      console.log('Error in RegistryComponent fetching data', error);
       throw error;
     }
   }
@@ -38,6 +37,7 @@ export class RegistryComponent implements OnInit {
         categoryGifts.push(gift);
       }
     });
+
     return categoryGifts;
   }
 
@@ -61,8 +61,24 @@ export class RegistryComponent implements OnInit {
     });
   }
 
-  getGiftStyle(gift: { claimed: boolean }) {
+  async updateGiftStatusNew(gift: Gift) {
 
+    // Construct the path dynamically based on gift's id
+    const path = `gifts/gift_${gift.id}`;
+
+    // Toggle claimed variable true/false
+    const data = !gift.claimed;
+
+    try {
+      await this.giftService.updateClaim(path, data);
+      this.ngOnInit();
+
+    } catch (error) {
+      console.error("Update failed", error);
+    }
+  }
+
+  getGiftStyle(gift: { claimed: boolean }) {
     return {
       'text-decoration': gift.claimed ? 'line-through' : 'none',
       'color': gift.claimed ? 'gray' : 'black',

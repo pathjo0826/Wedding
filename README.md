@@ -30,6 +30,8 @@ The Build and Deploy steps look slightly different. Use the following steps:
 2. Deploy command: `npx angular-cli-ghpages --dir=dist/wedding-app` (same as before!)
 3. Go to Github Repository > Settings > Pages and add Custom Domain: `patrikandclaudia2025.com`
 
-## reCAPTCA console
+## AppCheck
 
-`https://www.google.com/recaptcha/admin/site/715572117`
+A Firebase/Google AppCheck (reCAPTCHA) feature is implemented that only allow calls to the database from approved domains.
+Approved Domains are currently `patrikandclaudia2025.com` and `localhost`. These can be set from the reCAPTCHA console on:
+`https://www.google.com/recaptcha/admin/site/715572117`.
