@@ -35,3 +35,5 @@ The Build and Deploy steps look slightly different. Use the following steps:
 A Firebase/Google AppCheck (reCAPTCHA) feature is implemented that only allow calls to the database from approved domains.
 Approved Domains are currently `patrikandclaudia2025.com` and `localhost`. These can be set from the reCAPTCHA console on:
 `https://www.google.com/recaptcha/admin/site/715572117`.
+
+Relevant keys are found in reCAPTCHA.txt
