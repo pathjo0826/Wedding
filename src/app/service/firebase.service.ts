@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Gift } from '../domain/gift';
-import { getDatabase, ref, get } from 'firebase/database';
 
 @Injectable({
   providedIn: 'root'
@@ -13,24 +12,10 @@ export class FirebaseService {
 
   constructor(private http: HttpClient) { 
 
+    console.log('FirebaseService initialized');
+
     this.appCheckToken = localStorage.getItem('firebaseAppCheckToken');
-
-    console.log('Token received in service: ' + this.appCheckToken);
-  }
-
-  fetchGiftsFirebaseSDK() {
-
-    const db = getDatabase();
-    const giftsRef = ref(db, 'gifts');
-    get(giftsRef).then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-      console.error("Error reading data:", error);
-    });
+    
   }
 
   fetchGifts(): Observable<any> {
