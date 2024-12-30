@@ -10,6 +10,7 @@ import { RsvpService } from 'src/app/service/rsvp.service';
 })
 export class RsvpComponent {
 
+  attending!: boolean;
   guests: string[] = [''];
   message: string = '';
   validationErrors: boolean[] = [false];
@@ -20,11 +21,10 @@ export class RsvpComponent {
 
     try {
       const rsvp = {
+        attending: this.attending,
         name: this.guests,
         message: this.message
       };
-
-      console.log('This is guests: ' + this.guests);
 
       // Reset validation errors
       this.validationErrors = this.guests.map(() => false);
@@ -42,6 +42,8 @@ export class RsvpComponent {
       if (this.validationErrors.some((error) => error)) {
         throw new Error('Validation failed');
       }
+
+      console.log('This is the rsvp object' +  rsvp);
   
       await this.rsvpService.addGuest(rsvp);
       guestForm.reset();    
@@ -61,7 +63,8 @@ export class RsvpComponent {
   }
 
   trackByIndex(index: number): number {
-    return index; // Tracks items by their index
+    // Tracks items by their index
+    return index; 
   }
 
   validateName(name: string) {
