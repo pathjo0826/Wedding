@@ -10,36 +10,47 @@ import { RsvpService } from 'src/app/service/rsvp.service';
 })
 export class RsvpComponent {
 
-  validName: boolean;
   guests: string[] = [''];
+  message: string = '';
+  validationErrors: boolean[] = [false];
 
-  constructor(private rsvpService: RsvpService) {
-    this.validName = true;
-  }
+  constructor(private rsvpService: RsvpService) {}
 
-  async oldAddGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: NgForm) {
-    
-    try {
-      this.validateName(guest.name);
-      await this.rsvpService.addGuest(guest);
-
-      this.validName = true;
-      guestForm.reset();
-
-    } catch (error) {
-      this.validName = false;
-      console.error("Update failed", error);
-    }
-  }
-
-  async addGuest(rsvp: {name: string[], message: string}, newguestForm: NgForm) {
+   async addGuest(guestForm: NgForm) {
 
     try {
+      const rsvp = {
+        name: this.guests,
+        message: this.message
+      };
 
-      console.log(rsvp);
-      await this.rsvpService.addGuest(rsvp);
-      newguestForm.reset();
+      console.log('This is guests: ' + this.guests);
+
+      // Reset validation errors
+      this.validationErrors = this.guests.map(() => false);
+
+      // Mark the specific field as invalid
+      rsvp.name.forEach((name, index) => {
+        try {
+          this.validateName(name);
+        } catch (error) {
+          this.validationErrors[index] = true;
+        }
+      });
       
+      // Check if there are any validation errors
+      if (this.validationErrors.some((error) => error)) {
+        throw new Error('Validation failed');
+      }
+  
+      await this.rsvpService.addGuest(rsvp);
+      guestForm.reset();    
+      
+      // Reset guest list  
+      this.guests = ['']; 
+      // Reset errors
+      this.validationErrors = [false]; 
+
     } catch (error) {
       console.error("Update failed", error);
     }
@@ -54,7 +65,7 @@ export class RsvpComponent {
   }
 
   validateName(name: string) {
-    if (name.length < 1) {
+    if (!name || name.trim().length < 1) {
       throw Error;
     }
   }

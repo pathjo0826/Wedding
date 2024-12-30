@@ -10,14 +10,19 @@
     <br>
     <br>
     <div class="form-container">
-        <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm.value, guestForm)">
+        <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
+            
             <div *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
                 <label class="label">Guest {{i+1}}</label>
                 <input class="input-field" type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
+                <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
             </div>
+            
             <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
+            
             <label class="label">Message</label>
-            <textarea class="input-textarea" name="message" rows="5" ngModel></textarea>
+            <textarea class="input-textarea" name="message" rows="5" [(ngModel)]="message"></textarea>
+            
             <div class="send-button-container">
                 <button class="send-button" type="submit">SEND</button>
             </div>
