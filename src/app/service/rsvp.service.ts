@@ -18,12 +18,12 @@ export class RsvpService {
     */
    async addGuest(guest: any) {
 
-    const dbRef = ref(this.database, '/guests');
+    const dbRef = ref(this.database, '/rsvp');
 
     try {
 
       await push(dbRef, guest);
-      console.log(`Guest ${guest} added to database`);
+      console.log(`Rsvp ${guest} added to database`);
 
     } catch (error) {
       console.error('Error adding guest:', error);

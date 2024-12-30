@@ -23,6 +23,7 @@ import { RsvpComponent } from './views/rsvp/rsvp.component';
 import { RegistryComponent } from './views/registry/registry.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { EmailDisplayComponent } from './components/email-display/email-display.component';
+import { PlusSignComponent } from './components/plus-sign/plus-sign.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     RegistryComponent,
     FaqComponent,
     EmailDisplayComponent,
+    PlusSignComponent,
   ],
   imports: [
     BrowserModule,

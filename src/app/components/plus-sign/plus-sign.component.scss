@@ -1,0 +1,27 @@
+.ring {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(150, 164, 152);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-horizontal-bar {
+  position: absolute;
+  width: 13%;
+  height: 70%;
+  background-color: rgb(252, 251, 244);
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.plus-vertical-bar {
+  position: absolute;
+  width: 13%;
+  height: 70%;
+  background-color: rgb(252, 251, 244);
+  z-index: 2;
+}

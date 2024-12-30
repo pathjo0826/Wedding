@@ -11,12 +11,13 @@ import { RsvpService } from 'src/app/service/rsvp.service';
 export class RsvpComponent {
 
   validName: boolean;
+  guests: string[] = [''];
 
   constructor(private rsvpService: RsvpService) {
     this.validName = true;
   }
 
-  async addGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: NgForm) {
+  async oldAddGuest(guest: { name: string, plusOne: string, additional: string }, guestForm: NgForm) {
     
     try {
       this.validateName(guest.name);
@@ -29,6 +30,27 @@ export class RsvpComponent {
       this.validName = false;
       console.error("Update failed", error);
     }
+  }
+
+  async addGuest(rsvp: {name: string[], message: string}, newguestForm: NgForm) {
+
+    try {
+
+      console.log(rsvp);
+      await this.rsvpService.addGuest(rsvp);
+      newguestForm.reset();
+      
+    } catch (error) {
+      console.error("Update failed", error);
+    }
+  }
+
+  addLine() {
+    this.guests.push('');
+  }
+
+  trackByIndex(index: number): number {
+    return index; // Tracks items by their index
   }
 
   validateName(name: string) {

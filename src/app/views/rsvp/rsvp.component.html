@@ -1,23 +1,26 @@
 <div class="page-headline">RSVP</div>
 <div class="container">
     <div class="text-container">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam natus deleniti ex delectus at libero
-            consequatur est sequi numquam eveniet!
+        <p>Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</p>
+
+        <p>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the 
+            <app-plus-sign style="display: inline-block; vertical-align: middle; margin-left: 0.15em;"></app-plus-sign>
         </p>
     </div>
+    <br>
+    <br>
     <div class="form-container">
         <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm.value, guestForm)">
-            <label>Name</label>
-            <input class="input-field" type="text" name="name" ngModel>
-            <div class="error-message" *ngIf="!validName">Name missing</div>
-
-            <label>Plus one (if any)</label>
-            <input class="input-field" type="text" name="plusOne" ngModel>
-
-            <label>Additional info</label>
-            <textarea class="input-field" name="additional" rows="5" ngModel></textarea>
-
-            <input class="submit-button" type="submit" value="Send">
+            <div *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
+                <label class="label">Guest {{i+1}}</label>
+                <input class="input-field" type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
+            </div>
+            <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
+            <label class="label">Message</label>
+            <textarea class="input-textarea" name="message" rows="5" ngModel></textarea>
+            <div class="send-button-container">
+                <button class="send-button" type="submit">SEND</button>
+            </div>
         </form>
     </div>
 </div>
