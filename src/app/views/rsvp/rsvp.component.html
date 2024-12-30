@@ -1,31 +1,43 @@
 <div class="page-headline">RSVP</div>
 <div class="container">
     <div class="text-container">
-        <p>Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</p>
-
-        <p>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the 
+        <div>Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</div>
+        <div>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
             <app-plus-sign style="display: inline-block; vertical-align: middle; margin-left: 0.15em;"></app-plus-sign>
-        </p>
+        </div>
     </div>
-    <br>
     <br>
     <div class="form-container">
         <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
-            
-            <div *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
-                <label class="label">Guest {{i+1}}</label>
-                <input class="input-field" type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
-                <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
+            <h1>RSVP</h1>
+            <div class="attending-container">
+                <div class="accept">
+                    <div style="display: flex; justify-content: center;">
+                        HAPPILY ACCEPTS
+                        <input style="margin-left: 1em" type="checkbox">
+                    </div>
+                </div>
+                <div class="decline">
+                    <div style="display: flex; justify-content: center;">
+                        REGRETFULLY DECLINES
+                        <input style="margin-left: 1em" type="checkbox">
+                    </div>
+                </div>
             </div>
-            
-            <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
-            
-            <label class="label">Message</label>
-            <textarea class="input-textarea" name="message" rows="5" [(ngModel)]="message"></textarea>
-            
-            <div class="send-button-container">
-                <button class="send-button" type="submit">SEND</button>
+                <div class="guest-container" *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
+                    <label class="label">Guest {{i+1}}</label>
+                    <input class="input-field" type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
+                    <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
+                    <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
+                </div>
+            <div class="message-container">
+                <label class="label">Message</label>
+                <textarea class="input-textarea" name="message" rows="8" [(ngModel)]="message"></textarea>
+                <div class="send-button-container">
+                    <button class="send-button" type="submit">SEND</button>
+                </div>
             </div>
+
         </form>
     </div>
 </div>
