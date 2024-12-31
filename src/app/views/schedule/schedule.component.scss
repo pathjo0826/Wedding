@@ -18,6 +18,10 @@
     font-size: 22px;
 }
 
+.schedule-container {
+    font-size: 16px;
+}
+
 .grid-system {
     display: grid;
     grid-template-columns: 10% auto;
@@ -48,11 +52,22 @@ a {
 
 @media (max-width: 1200px) {}
 
+.schedule-container .headline {
+    font-size: 20px;
+}
 
 @media (max-width: 1000px) {
 
     .page-headline {
         font-size: 26px;
+    }
+
+    .schedule-container {
+        font-size: 14px;
+    }
+
+    .schedule-container .headline {
+        font-size: 18px;
     }
 }
 
@@ -61,6 +76,14 @@ a {
     .page-headline {
         font-size: 22px;
     }
+
+    .schedule-container {
+        font-size: 12px;
+    }
+
+    .schedule-container .headline {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -68,11 +91,27 @@ a {
     .page-headline {
         font-size: 18px;
     }
+
+    .schedule-container {
+        font-size: 10px;
+    }
+
+    .schedule-container .headline {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 450px) {
 
     .page-headline {
         font-size: 16px;
+    }
+
+    .schedule-container {
+        font-size: 8px;
+    }
+
+    .schedule-container .headline {
+        font-size: 12px;
     }
 }
