@@ -3,8 +3,9 @@
     <div class="text-container">
         <div>Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</div>
         <div>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
-            <app-plus-sign style="display: inline-block; vertical-align: middle; margin-left: 0.15em;"></app-plus-sign>
+            <app-plus-sign class="add-symbol-text"></app-plus-sign>
         </div>
+        <div>If there is anything we should know, feel free to write us a message.</div>
     </div>
 
     <div class="form-container">
@@ -12,26 +13,24 @@
             <h1>RSVP</h1>
             <div class="attending-container">
                 <div class="accept">
-                    <div style="display: flex; justify-content: center;">
-                        HAPPILY ACCEPTS
-                        <input style="margin-left: 1em" type="radio" name="attending" [(ngModel)]="attending" [value]="true">
-                    </div>
+                    <label>HAPPILY ACCEPTS</label>
+                    <input type="radio" name="attending" [(ngModel)]="attending" [value]="true">
                 </div>
                 <div class="decline">
-                    <div style="display: flex; justify-content: center;">
-                        REGRETFULLY DECLINES
-                        <input style="margin-left: 1em" type="radio" name="attending" [(ngModel)]="attending" [value]="false">
-                    </div>
+                    <label>REGRETFULLY DECLINES</label>
+                    <input type="radio" name="attending" [(ngModel)]="attending" [value]="false">
                 </div>
             </div>
+
             <div class="guest-container" *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
                 <div class="guest-field">
                     <label class="label">Guest {{i+1}}</label>
                     <input class="input-field" type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
                     <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
-                    <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
                 </div>
             </div>
+            <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
+
             <div class="message-container">
                 <label class="label">Message</label>
                 <textarea class="input-textarea" name="message" rows="8" [(ngModel)]="message"></textarea>

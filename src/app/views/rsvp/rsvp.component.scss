@@ -26,6 +26,12 @@
     margin-bottom: 1em;
 }
 
+.add-symbol-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.15em;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -47,36 +53,44 @@
 
 h1 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     color: rgb(150, 164, 152);
     margin-top: 0;
 }
 
-
 .attending-container {
+  
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-
     font-size: 16px;
-    margin-bottom: 1em;
     letter-spacing: 2px;
-    margin-left: 0em;
-    margin-right: 0em;
-
+    margin-bottom: 1em;
     width: 100%;
-    //background-color: lightblue;
-    
 }
 
 .accept {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .decline {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+input[type="radio"] {
+    margin: 0;
+    margin-left: 1em;
+    width: 18px;
+    height: 18px;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
 }
 
 .guest-container {
@@ -109,6 +123,7 @@ h1 {
 
     border: none;
     border-bottom: 0.5px solid black;
+    color: rgb(97, 96, 96);
     background-color: rgb(252, 251, 244);
 }
 
@@ -124,7 +139,9 @@ h1 {
 }
 
 .add-sign {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    width: 55%;
     margin: 0;
     padding: 0;
 }
@@ -167,6 +184,10 @@ h1 {
         letter-spacing: 2px;
     }
 
+    input[type="radio"] {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -187,6 +208,20 @@ h1 {
         font-size: 12px;
         letter-spacing: 1px;
     }
+
+    input[type="radio"] {
+        width: 13px;
+        height: 13px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        height: 25px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -199,15 +234,37 @@ h1 {
         font-size: 14px;
     }
 
-
     h1 {
         font-size: 22px;
     }
 
     .attending-container {
-        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+
         margin-bottom: 0.5em;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
+    }
+    
+    .accept, .decline {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .input-field {
+        font-size: 12px;
+        height: 20px;
+    }
+
+    .input-field::placeholder {
+        font-size: 12px;
     }
 }
 
@@ -225,6 +282,28 @@ h1 {
         font-size: 18px;
     }
 
+    .attending-container {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    input[type="radio"] {
+        width: 10px;
+        height: 10px;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+
+    .input-field {
+        font-size: 10px;
+        height: 18px;
+    }
+    
+    .input-field::placeholder {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -239,5 +318,28 @@ h1 {
 
     h1 {
         font-size: 16px;
+    }
+
+    .attending-container {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    input[type="radio"] {
+        width: 8px;
+        height: 8px;
+    }
+
+    .label {
+        font-size: 9px;
+    }
+
+    .input-field {
+        font-size: 9px;
+        height: 12px;
+    }
+    
+    .input-field::placeholder {
+        font-size: 9px;
     }
 }
