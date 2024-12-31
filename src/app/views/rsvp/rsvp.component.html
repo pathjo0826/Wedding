@@ -1,11 +1,11 @@
 <div class="page-headline">RSVP</div>
 <div class="container">
     <div class="text-container">
-        <div>Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</div>
-        <div>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
+        <div class="text">Let us know if you will attend the wedding by RSVP before <b>31 May 2025</b>.</div>
+        <div class="text">Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
             <app-plus-sign class="add-symbol-text"></app-plus-sign>
         </div>
-        <div>If there is anything we should know, feel free to write us a message.</div>
+        <div class="text">If there is anything we should know, feel free to write us a message.</div>
     </div>
 
     <div class="form-container">
@@ -29,11 +29,11 @@
                     <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
                 </div>
             </div>
-            <app-plus-sign class="add-sign" (click)="addLine()"></app-plus-sign>
+            <app-plus-sign class="add-symbol-form" (click)="addLine()"></app-plus-sign>
 
             <div class="message-container">
                 <label class="label">Message</label>
-                <textarea class="input-textarea" name="message" rows="8" [(ngModel)]="message"></textarea>
+                <textarea class="input-textarea" name="message" [(ngModel)]="message"></textarea>
                 <div class="send-button-container">
                     <button class="send-button" type="submit">SEND</button>
                 </div>

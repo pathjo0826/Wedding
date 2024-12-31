@@ -16,14 +16,12 @@
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 16px;
 }
 
-.text-container div {
+.text {
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .add-symbol-text {
@@ -59,7 +57,7 @@ h1 {
 }
 
 .attending-container {
-  
+
     display: grid;
     grid-template-columns: 50% 50%;
     font-size: 16px;
@@ -112,10 +110,10 @@ input[type="radio"]:hover {
     font-size: 16px;
     color: rgb(97, 96, 96);
     margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 .input-field {
-    margin-top: 0em;
     margin-bottom: 0.5em;
     width: 100%;
     height: 30px;
@@ -138,7 +136,7 @@ input[type="radio"]:hover {
     margin-bottom: 0.5em;
 }
 
-.add-sign {
+.add-symbol-form {
     display: flex;
     justify-content: flex-start;
     width: 55%;
@@ -146,7 +144,7 @@ input[type="radio"]:hover {
     padding: 0;
 }
 
-.add-sign:hover {
+.add-symbol-form:hover {
     cursor: pointer;
 }
 
@@ -157,20 +155,29 @@ input[type="radio"]:hover {
     width: 55%;
 }
 
+.input-textarea {
+    font-size: 14px;
+    line-height: 14px;
+    height: calc(14px * 8);
+}
+
 .send-button {
     display: flex;
     justify-content: center;
-    width: auto;
-    height: auto;
-    padding: 0.3em 0.7em 0.3em;
-    margin-top: 0.5em;
-    margin-bottom: 3em;
+    
     border-radius: 5px;
     background-color: rgb(150, 164, 152);
     color: white;
     border: none;
     font-family: 'Lora', cursive;
     font-size: 14px;
+
+    width: auto;
+    height: auto;
+    padding: 0.3em 0.7em 0.3em;
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+
 }
 
 .send-button:hover {
@@ -216,11 +223,23 @@ input[type="radio"]:hover {
 
     .label {
         font-size: 14px;
+        margin-bottom: 0.4em;
+        
     }
 
     .input-field {
         font-size: 14px;
         height: 25px;
+    }
+
+    .input-textarea {
+        font-size: 14px;
+        line-height: 14px;
+        height: calc(14px * 8);
+    }
+
+    .send-button {
+        font-size: 12px;
     }
 }
 
@@ -245,8 +264,9 @@ input[type="radio"]:hover {
         margin-bottom: 0.5em;
         letter-spacing: 2px;
     }
-    
-    .accept, .decline {
+
+    .accept,
+    .decline {
         display: flex;
         justify-content: space-between;
         padding: 0.3em;
@@ -256,6 +276,8 @@ input[type="radio"]:hover {
 
     .label {
         font-size: 12px;
+        margin-bottom: 0.3em;
+
     }
 
     .input-field {
@@ -265,6 +287,19 @@ input[type="radio"]:hover {
 
     .input-field::placeholder {
         font-size: 12px;
+    }
+
+    .input-textarea {
+        font-size: 12px;
+        line-height: 12px;
+        height: calc(12px * 8);
+    }
+
+    .send-button {
+        border-radius: 4px;
+        font-size: 10px;
+        margin-top: 0.3em;
+        padding: 0.3em 0.6em 0.3em;
     }
 }
 
@@ -294,15 +329,29 @@ input[type="radio"]:hover {
 
     .label {
         font-size: 10px;
+        margin-bottom: 0.2em;
     }
 
     .input-field {
         font-size: 10px;
         height: 18px;
     }
-    
+
     .input-field::placeholder {
         font-size: 10px;
+    }
+
+    .input-textarea {
+        font-size: 10px;
+        line-height: 10px;
+        height: calc(10px * 7);
+    }
+
+    .send-button {
+        border-radius: 3px;
+        font-size: 9px;
+        margin-top: 0.2em;
+        padding: 0.2em 0.5em 0.2em;
     }
 }
 
@@ -332,14 +381,28 @@ input[type="radio"]:hover {
 
     .label {
         font-size: 9px;
+        margin-bottom: 0.1em;
     }
 
     .input-field {
         font-size: 9px;
         height: 12px;
     }
-    
+
     .input-field::placeholder {
         font-size: 9px;
+    }
+
+    .input-textarea {
+        font-size: 8px;
+        line-height: 8px;
+        height: calc(8px * 6);
+    }
+
+    .send-button {
+        border-radius: 2px;
+        font-size: 7px;
+        margin-top: 0em;
+        padding: 0.2em 0.5em 0.2em;
     }
 }
