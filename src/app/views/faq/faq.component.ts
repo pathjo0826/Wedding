@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FaqComponent {
 
+  public email() {
+    return "patrikandclaudia2025@gmail.com";
+  }
 }
