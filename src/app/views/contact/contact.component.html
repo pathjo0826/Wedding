@@ -1,2 +1,14 @@
 <div class="page-headline">CONTACT</div>
-<div class="contact-container"></div>
+<div class="contact-container">
+
+    <form class="form" #contactForm="ngForm" (ngSubmit)="send(contactForm)">
+        <br>
+        <input type="text" name="name" [(ngModel)]="form.name" placeholder="Name">
+        <br>
+        <input type="text" name="email" [(ngModel)]="form.email" placeholder="Email">
+        <br>
+        <textarea name="message" [(ngModel)]="form.message" placeholder="Message"></textarea>
+        <br>
+        <button type="submit">SEND</button>
+    </form>
+</div>

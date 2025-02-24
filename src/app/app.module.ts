@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
 import { initializeAppCheck, ReCaptchaV3Provider, getToken } from 'firebase/app-check';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
-import { enableLogging } from 'firebase/database';
 
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
