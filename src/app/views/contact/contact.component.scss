@@ -23,15 +23,26 @@
     height: 100vh;
 }
 
-h2 {
-    margin-top: 0em;
-    color: rgb(150, 164, 152);
-}
-
-.info-text {
+.contact-text {
     display: flex;
     justify-content: center;
     text-align: justify;
+}
+
+.content {
+    position: relative;
+    font-size: 14px;
+}
+
+.content::first-letter {
+    /* Make the first letter larger */
+    font-size: 36px; 
+    /* Align it to the left of the text */
+    float: left; 
+    /* Add a bit of spacing to the right */
+    margin-right: 0.15em; 
+    /* Align with the paragraph's lines */
+    line-height: 1; 
 }
 
 .image-container {
@@ -39,13 +50,12 @@ h2 {
     justify-content: center;
 }
 
-.us-image {
+img {
     margin-top: 2em;
     width: 75%;
     height: auto;
     opacity: 0.9;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
-    //filter: grayscale(100%);
 }
 
 .right-column {
@@ -124,13 +134,65 @@ h2 {
     margin-bottom: 3em;
 }
 
-@media (max-width: 1200px) {}
+.send-button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+}
 
 
 @media (max-width: 1000px) {
 
     .page-headline {
         font-size: 26px;
+    }
+
+    .contact-container {
+        margin: 1.6em;
+        column-gap: 2%;
+    }
+
+    .content {
+        font-size: 12px;
+    }
+
+    .content::first-letter {
+        font-size: 30px;
+    }
+
+    img {
+        margin-top: 1.6em;
+    }
+
+    .right-column {
+        margin-left: 0.8em;
+        padding-left: 2.5em;
+    }
+
+    .label {
+        font-size: 14px;
+        margin-bottom: 0.4em;
+    }
+
+    .input-field {
+        font-size: 14px;
+        height: 26px;
+        margin-bottom: 0.4em;
+    }
+
+    .input-field::placeholder {
+        font-size: 12px;
+    }
+
+    .input-textarea {
+        font-size: 12px;
+        height: calc(12px * 8);
+    }
+
+    .send-button {
+        font-size: 12px;
     }
 }
 
@@ -140,6 +202,55 @@ h2 {
     .page-headline {
         font-size: 22px;
     }
+
+    .contact-container {
+        margin: 1.2em;
+        column-gap: 1.5%;
+    }
+
+    .content {
+        font-size: 10px;
+    }
+
+    .content::first-letter {
+        font-size: 25px;
+    }
+
+    img {
+        width: 80%;
+        margin-top: 1.2em;
+    }
+
+    .right-column {
+        margin-left: 0.6em;
+        padding-left: 2em;
+    }
+    .label {
+        font-size: 12px;
+        margin-bottom: 0.3em;
+    }
+
+    .input-field {
+        font-size: 12px;
+        height: 22px;
+        margin-bottom: 0.3em;
+    }
+
+    .input-field::placeholder {
+        font-size: 10px;
+    }
+
+    .input-textarea {
+        font-size: 12px;
+        height: calc(10px * 8);
+    }
+
+    .send-button {
+        border-radius: 4px;
+        font-size: 10px;
+        margin-top: 0.3em;
+        padding: 0.3em 0.6em 0.3em;
+    }
 }
 
 @media (max-width: 600px) {
@@ -147,11 +258,108 @@ h2 {
     .page-headline {
         font-size: 18px;
     }
+
+    .contact-container {
+        margin: 0.8em;
+        column-gap: 1%;
+    }
+
+    .content {
+        font-size: 8px;
+    }
+
+    .content::first-letter {
+        font-size: 20px;
+    }
+
+    img {
+        margin-top: 0.8em;
+    }
+
+    .right-column {
+        margin-left: 0.4em;
+        padding-left: 1.5em;
+    }
+    .label {
+        font-size: 10px;
+        margin-bottom: 0.2em;
+    }
+
+    .input-field {
+        font-size: 10px;
+        height: 18px;
+        margin-bottom: 0.2em;
+    }
+
+    .input-field::placeholder {
+        font-size: 9px;
+    }
+
+    .input-textarea {
+        font-size: 10px;
+        height: calc(8px * 8);
+    }
+
+    .send-button {
+        border-radius: 3px;
+        font-size: 9px;
+        margin-top: 0.2em;
+        padding: 0.2em 0.5em 0.2em;
+    }
 }
 
 @media (max-width: 450px) {
 
     .page-headline {
         font-size: 16px;
+    }
+
+    .contact-container {
+        margin: 0.4em;
+        column-gap: 0.5%;
+    }
+
+    .content {
+        font-size: 7px;
+    }
+
+    .content::first-letter {
+        font-size: 18px;
+    }
+
+    img {
+        margin-top: 0.4em;
+    }
+
+    .right-column {
+        margin-left: 0.2em;
+        padding-left: 1em;
+    }
+
+    .label {
+        font-size: 8px;
+        margin-bottom: 0.1em;
+    }
+
+    .input-field {
+        font-size: 8px;
+        height: 14px;
+        margin-bottom: 0.1em;
+    }
+    
+    .input-field::placeholder {
+        font-size: 7px;
+    }
+
+    .input-textarea {
+        font-size: 8px;
+        height: calc(6px * 8);
+    }
+    
+    .send-button {
+        border-radius: 2px;
+        font-size: 7px;
+        margin-top: 0em;
+        padding: 0.2em 0.5em 0.2em;
     }
 }
