@@ -96,11 +96,17 @@ img {
     width: 60%;
     height: 30px;
     font-size: 16px;
+    font-family: 'Lora', cursive;
 
     border: none;
     border-bottom: 0.5px solid black;
     color: rgb(97, 96, 96);
     background-color: rgb(252, 251, 244);
+}
+
+.input-field-error {
+    color: red;
+    font-size: 14px;
 }
 
 .input-field::placeholder {

@@ -14,15 +14,19 @@
             <div class="name-field">
                 <label class="label">Name:</label>
                 <input class="input-field" type="text" name="name" [(ngModel)]="form.name" placeholder="Name">
+                <div class="input-field-error" *ngIf="isNameMissing && isFormSubmitted">Name missing</div>
             </div>
             <div class="email-field">
                 <label class="label">E-mail:</label>
-                <input class="input-field" type="text" name="email" [(ngModel)]="form.email" placeholder="E-mail">
+                <input class="input-field" type="email" name="email" [(ngModel)]="form.email" placeholder="E-mail">
+                <div class="input-field-error" *ngIf="isEmailMissing && isFormSubmitted">E-mail missing</div>
+                <div class="input-field-error" *ngIf="isEmailIncorrect && isFormSubmitted">Invalid e-mail</div>
             </div>
 
             <div class="message-field">
                 <label class="label">Message:</label>
                 <textarea class="input-textarea" name="message" [(ngModel)]="form.message"></textarea>
+                <div class="input-field-error" *ngIf="isMessageMissing && isFormSubmitted">No message</div>
                 <div class="send-button-container">
                     <button class="send-button" type="submit">SEND</button>
                 </div>

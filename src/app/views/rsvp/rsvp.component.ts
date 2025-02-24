@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { FirebaseService } from 'src/app/service/firebase.service';
 import { RsvpService } from 'src/app/service/rsvp.service';
 
 @Component({
@@ -43,7 +42,7 @@ export class RsvpComponent {
         throw new Error('Validation failed');
       }
 
-      console.log('This is the rsvp object' +  rsvp);
+      console.log('RSVP object: ' +  rsvp.name + ", " + rsvp.attending + ", " + rsvp.message);
   
       await this.rsvpService.addGuest(rsvp);
       guestForm.reset();    
