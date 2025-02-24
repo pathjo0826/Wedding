@@ -17,10 +17,9 @@
     column-gap: 3%;
 }
 
-.grid-area-1 {
+.left-column {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgb(150, 164, 152);
     height: 100vh;
 }
 
@@ -29,14 +28,31 @@ h2 {
     color: rgb(150, 164, 152);
 }
 
-.us-image {
-    margin-top: 2em;
-    width: 90%;
-    height: auto;
-    opacity: 0.7;
+.info-text {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
 }
 
-.grid-area-2 {}
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.us-image {
+    margin-top: 2em;
+    width: 75%;
+    height: auto;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+    //filter: grayscale(100%);
+}
+
+.right-column {
+    margin-left: 1em;
+    padding-left: 3em;
+    border-left: 1px solid rgb(150, 164, 152);
+}
 
 .name-field {
     display: flex;
@@ -56,7 +72,6 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 55%;
 }
 
 .label {
@@ -68,7 +83,7 @@ h2 {
 
 .input-field {
     margin-bottom: 0.5em;
-    width: 50%;
+    width: 60%;
     height: 30px;
     font-size: 16px;
 
@@ -86,6 +101,7 @@ h2 {
 .input-textarea {
     font-size: 14px;
     line-height: 14px;
+    width: 60%;
     height: calc(14px * 8);
     font-family: 'Lora', cursive;
 }

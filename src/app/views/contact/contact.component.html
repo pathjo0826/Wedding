@@ -1,12 +1,16 @@
 <div class="page-headline">CONTACT</div>
 <div class="contact-container">
-    <div class="grid-area-1">
-        <h2>CONTACT US</h2>
+    <div class="left-column">
+        <div class="contact-text">
+            <h2>REACH OUT...</h2>
+            <div class="info-text">... to us with any question, big or small. Use this form, call us or send a private text
+                message. The toastmaster is also available through this form.</div>
+        </div>
         <div class="image-container">
             <img class="us-image" src="assets/images/ratio1-1/picture16-1_1.jpg">
         </div>
     </div>
-    <div class="grid-area-2">
+    <div class="right-column">
         <form class="form" #contactForm="ngForm" (ngSubmit)="send(contactForm)">
             <div class="name-field">
                 <label class="label">Name:</label>
@@ -16,10 +20,11 @@
                 <label class="label">E-mail:</label>
                 <input class="input-field" type="text" name="email" [(ngModel)]="form.email" placeholder="E-mail">
             </div>
-            
+
             <div class="message-field">
                 <label class="label">Message:</label>
-                <textarea class="input-textarea" name="message" [(ngModel)]="form.message" placeholder="Message"></textarea>
+                <textarea class="input-textarea" name="message" [(ngModel)]="form.message"
+                    placeholder="Message"></textarea>
                 <div class="send-button-container">
                     <button class="send-button" type="submit">SEND</button>
                 </div>
