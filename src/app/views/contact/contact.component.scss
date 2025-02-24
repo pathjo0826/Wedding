@@ -12,15 +12,107 @@
 
 .contact-container {
     margin: 2em;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    column-gap: 3%;
 }
 
-@media (max-width: 1200px) {
-    
+.grid-area-1 {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(150, 164, 152);
+    height: 100vh;
 }
+
+h2 {
+    margin-top: 0em;
+    color: rgb(150, 164, 152);
+}
+
+.us-image {
+    margin-top: 2em;
+    width: 90%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.grid-area-2 {}
+
+.name-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.email-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.message-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 55%;
+}
+
+.label {
+    font-size: 16px;
+    color: rgb(97, 96, 96);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.input-field {
+    margin-bottom: 0.5em;
+    width: 50%;
+    height: 30px;
+    font-size: 16px;
+
+    border: none;
+    border-bottom: 0.5px solid black;
+    color: rgb(97, 96, 96);
+    background-color: rgb(252, 251, 244);
+}
+
+.input-field::placeholder {
+    font-family: 'Lora', cursive;
+    font-size: 14px;
+}
+
+.input-textarea {
+    font-size: 14px;
+    line-height: 14px;
+    height: calc(14px * 8);
+    font-family: 'Lora', cursive;
+}
+
+.send-button {
+    display: flex;
+    justify-content: center;
+
+    border-radius: 5px;
+    background-color: rgb(150, 164, 152);
+    color: white;
+    border: none;
+    font-family: 'Lora', cursive;
+    font-size: 14px;
+
+    width: auto;
+    height: auto;
+    padding: 0.3em 0.7em 0.3em;
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+}
+
+@media (max-width: 1200px) {}
 
 
 @media (max-width: 1000px) {
-    
+
     .page-headline {
         font-size: 26px;
     }
@@ -28,21 +120,21 @@
 
 
 @media (max-width: 800px) {
-    
+
     .page-headline {
         font-size: 22px;
     }
 }
 
 @media (max-width: 600px) {
-    
+
     .page-headline {
         font-size: 18px;
     }
 }
 
 @media (max-width: 450px) {
-    
+
     .page-headline {
         font-size: 16px;
     }
