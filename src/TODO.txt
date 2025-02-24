@@ -1,4 +1,4 @@
-1. Finish up "Contact" page
-2. Set correct RSVP date
+1. Add validation to Contact page
 3. Add more items in the Wedding Registry
 4. Complete the "About" page with images of Domkyrkan and Restaurant River
+5. Make About page responsive
