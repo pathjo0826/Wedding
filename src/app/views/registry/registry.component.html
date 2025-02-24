@@ -45,10 +45,10 @@
             </tr>
         </tbody>
     </table>
-    <div class="category-headline">Experience</div>
+    <div class="category-headline">Other</div>
     <table>
         <tbody>
-            <tr *ngFor="let gift of sortGifts('experience')">
+            <tr *ngFor="let gift of sortGifts('other')">
                 <td class="td-checkbox">
                     <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                         [class.ticked]="gift.claimed">

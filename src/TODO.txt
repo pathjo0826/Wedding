@@ -1,4 +1,4 @@
-1. "The Wedding" (or "Schedule") - Time schedule.
-2. "FAQ" - Accomodation, transportation, contact info, speaches, allergies (kolla med restaurangen hur de hanterar det) etc.
-3. "RSVP" - Modify to Production-READY
-4. "About" add pictures.
+1. Finish up "Contact" page
+2. Set correct RSVP date
+3. Add more items in the Wedding Registry
+4. Complete the "About" page with images of Domkyrkan and Restaurant River

@@ -1,4 +1,3 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { getDatabase, ref, get, Database, set, update } from 'firebase/database';
 
@@ -9,7 +8,7 @@ export class GiftService {
 
   database: Database;
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.database = getDatabase();
   }
 
