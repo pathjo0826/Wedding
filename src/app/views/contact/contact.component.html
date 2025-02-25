@@ -10,7 +10,8 @@
         </div>
     </div>
     <div class="right-column">
-        <form class="form" #contactForm="ngForm" (ngSubmit)="send(contactForm)">
+        <div class="confirmation" *ngIf="isFormAccepted">E-mail has been sent!</div>
+        <form *ngIf="!isFormAccepted" class="form" #contactForm="ngForm" (ngSubmit)="send()">
             <div class="name-field">
                 <label class="label">Name:</label>
                 <input class="input-field" type="text" name="name" [(ngModel)]="form.name" placeholder="Name">

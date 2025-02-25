@@ -29,16 +29,18 @@ export class ContactComponent {
   isMessageIncorrect!: boolean;
 
   isFormSubmitted!: boolean;
+  isFormAccepted!: boolean;
 
-  constructor(private emailService: EmailService) { }
+  constructor(private emailService: EmailService) { 
+    this.isFormSubmitted = false;
+    this.isFormAccepted = false;
+  }
   
-  send(contactForm: NgForm) {
+  send() {
     
     this.isNameMissing = false;
-
     this.isEmailMissing = false;
     this.isEmailIncorrect = false;
-
     this.isMessageMissing = false;
 
     this.isFormSubmitted = true;
@@ -46,7 +48,7 @@ export class ContactComponent {
     try {
       this.validateFormData();
       this.emailService.sendEmail(this.form);
-      contactForm.resetForm();
+      this.acknowledgeSubmission();
     } catch (Error) {
       console.log('Validation failed.');
     }
@@ -81,5 +83,9 @@ export class ContactComponent {
       this.isMessageMissing = true;
       throw Error;
     }
+  }
+
+  acknowledgeSubmission(){
+    this.isFormAccepted = true;
   }
 }
