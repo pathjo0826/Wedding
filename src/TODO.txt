@@ -1,4 +1,4 @@
-1. Add validation to Contact page
-3. Add more items in the Wedding Registry
-4. Complete the "About" page with images of Domkyrkan and Restaurant River
-5. Make About page responsive
+1. Add more items in the Wedding Registry
+2. Complete the "About" page with images of Domkyrkan and Restaurant River
+3. Implement a confirmation message when an RSVP has been sent
+4. An explanation text on the top of the Registry page.

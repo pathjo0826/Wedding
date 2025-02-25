@@ -12,7 +12,13 @@
 
 .registry-container {
     margin: 2em;
+}
 
+.registry-about {
+    font-size: 16px;
+}
+
+.registry-content {
     column-count: 2;
     column-gap: 20px;
     height: 80vh;
@@ -34,7 +40,7 @@ table {
     color: white;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 3px;
     font-size: 18px;
 }
@@ -105,7 +111,7 @@ a:visited {
 @media (max-width: 1200px) {
 
     .category-headline {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     td {
@@ -130,7 +136,11 @@ a:visited {
     }
 
     .category-headline {
-        font-size: 16px;
+        font-size: 15px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-radius: 3px;
+        padding: 3px;
     }
 
     td {
@@ -159,7 +169,11 @@ a:visited {
     }
 
     .category-headline {
-        font-size: 15px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        border-radius: 3px;
+        padding: 2px;
+        font-size: 14px;
     }
 
     td {
@@ -183,10 +197,14 @@ a:visited {
         font-size: 18px;
     }
     .category-headline {
-        font-size: 14px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        border-radius: 2px;
+        padding: 2px;
+        font-size: 13px;
     }
 
-    .registry-container {
+    .registry-content {
         column-count: 1;
     }
 
@@ -212,7 +230,11 @@ a:visited {
     }
 
     .category-headline {
-        font-size: 13px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        padding: 2px;
+        font-size: 12px;
     }
 
     td {

@@ -16,18 +16,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To build for re-deployment run `ng build --configuration=production --base-href https://pathjo0826.github.io/Wedding/`
 
-## Deploy
+## Deploy GitHub
 
 To deploy the build run `npx angular-cli-ghpages --dir=dist/wedding-app` 
 
-When the app is deployed on GitHub pages it is accessible worldwide on: `https://github.com/pathjo0826/Wedding`
+When the app is deployed on GitHub pages it is accessible worldwide on: `https://pathjo0826.github.io/Wedding/`
 
-## Using Custom Domain
+## Deploy Using Custom Domain
 
 The Build and Deploy steps look slightly different. Use the following steps:
 
 1. Build command: `ng build --configuration=production --base-href=/`
-2. Deploy command: `npx angular-cli-ghpages --dir=dist/wedding-app` (same as before!)
+2. Deploy command: `npx angular-cli-ghpages --dir=dist/wedding-app`
 3. Go to Github Repository > Settings > Pages and add Custom Domain: `patrikandclaudia2025.com`
 
 ## AppCheck
@@ -37,3 +37,9 @@ Approved Domains are currently `patrikandclaudia2025.com` and `localhost`. These
 `https://www.google.com/recaptcha/admin/site/715572117`.
 
 Relevant keys are found in reCAPTCHA.txt
+
+## EmailJS
+
+EmailJS is used as the service provider for automatic e-mail forwarding of form data in the Contact View. The EmailJS SDK is 
+installed/used and configured in the EmailService. Necessary parameters are found on the EmailJS dashboard on
+`https://dashboard.emailjs.com/sign-in`.

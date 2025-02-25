@@ -1,63 +1,70 @@
 <div class="page-headline">REGISTRY</div>
 <div class="registry-container">
-    <div class="category-headline">Kitchen</div>
-    <table>
-        <tbody>
-            <tr *ngFor="let gift of sortGifts('kitchen')">
-                <td class="td-checkbox">
-                    <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
-                        [class.ticked]="gift.claimed">
-                    </button>
-                </td>
-                <td [ngStyle]="getGiftStyle(gift)">
-                    <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="category-headline">Living Room</div>
-    <table>
-        <tbody>
-            <tr *ngFor="let gift of sortGifts('living-room')">
-                <td class="td-checkbox">
-                    <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
-                        [class.ticked]="gift.claimed">
-                    </button>
-                </td>
-                <td [ngStyle]="getGiftStyle(gift)">
-                    <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="category-headline">Bathroom</div>
-    <table>
-        <tbody>
-            <tr *ngFor="let gift of sortGifts('bathroom')">
-                <td class="td-checkbox">
-                    <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
-                        [class.ticked]="gift.claimed">
-                    </button>
-                </td>
-                <td [ngStyle]="getGiftStyle(gift)">
-                    <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="category-headline">Other</div>
-    <table>
-        <tbody>
-            <tr *ngFor="let gift of sortGifts('other')">
-                <td class="td-checkbox">
-                    <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
-                        [class.ticked]="gift.claimed">
-                    </button>
-                </td>
-                <td [ngStyle]="getGiftStyle(gift)">
-                    <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="registry-about"style="margin: 2em">
+        Your support of our marriage is in its deepest sense all what we wish for, as Your presence on this special day would show us,
+        there is nothing more we could ask for! But also knowing our guests too well, knowing your generosity can be stronger than any 
+        man or woman's imagination to buy the perfect wedding gift, we've put together this <i>Wedding Registry</i>.
+    </div>
+    <div class="registry-content">
+        <div class="category-headline">Kitchen</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('kitchen')">
+                    <td class="td-checkbox">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="category-headline">Living Room</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('living-room')">
+                    <td class="td-checkbox">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="category-headline">Bathroom</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('bathroom')">
+                    <td class="td-checkbox">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="category-headline">Other</div>
+        <table>
+            <tbody>
+                <tr *ngFor="let gift of sortGifts('other')">
+                    <td class="td-checkbox">
+                        <button class="button" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed">
+                        </button>
+                    </td>
+                    <td [ngStyle]="getGiftStyle(gift)">
+                        <a href="{{gift.link}}" target="_blank"> {{gift.name}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
