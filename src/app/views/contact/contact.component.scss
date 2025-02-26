@@ -26,23 +26,22 @@
 .contact-text {
     display: flex;
     justify-content: center;
-    text-align: justify;
 }
 
 .content {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .content::first-letter {
     /* Make the first letter larger */
-    font-size: 36px; 
+    font-size: 40px; 
     /* Align it to the left of the text */
     float: left; 
     /* Add a bit of spacing to the right */
-    margin-right: 0.15em; 
+    margin-right: 0.12em; 
     /* Align with the paragraph's lines */
-    line-height: 1; 
+    line-height: 1;
 }
 
 .image-container {
@@ -169,11 +168,11 @@ img {
     }
 
     .content {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .content::first-letter {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     img {
@@ -228,11 +227,11 @@ img {
     }
 
     .content {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .content::first-letter {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     img {
@@ -288,11 +287,11 @@ img {
     }
 
     .content {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .content::first-letter {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     img {
@@ -348,11 +347,11 @@ img {
     }
 
     .content {
-        font-size: 7px;
+        font-size: 8px;
     }
 
     .content::first-letter {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     img {
