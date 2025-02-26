@@ -14,23 +14,6 @@
     margin: 2em;
 }
 
-.registry-about {
-    font-size: 16px;
-    position: relative;
-    margin-bottom: 2em;
-}
-
-.registry-about::first-letter {
-    /* Make the first letter larger */
-    font-size: 40px; 
-    /* Align it to the left of the text */
-    float: left; 
-    /* Add a bit of spacing to the right */
-    margin-right: 0.1em; 
-    /* Align with the paragraph's lines */
-    line-height: 1; 
-}
-
 .registry-content {
     column-count: 2;
     column-gap: 20px;
@@ -143,14 +126,6 @@ a:visited {
 
 @media (max-width: 1000px) {
 
-    .registry-about {
-        font-size: 14px;
-    }
-
-    .registry-about::first-letter {
-        font-size: 35px;
-    }
-
     .page-headline {
         font-size: 26px;
     }
@@ -182,14 +157,6 @@ a:visited {
 
     .page-headline {
         font-size: 22px;
-    }
-
-    .registry-about {
-        font-size: 12px;
-    }
-
-    .registry-about::first-letter {
-        font-size: 30px;
     }
 
     .columns {
@@ -225,14 +192,6 @@ a:visited {
         font-size: 18px;
     }
 
-    .registry-about {
-        font-size: 10px;
-    }
-
-    .registry-about::first-letter {
-        font-size: 25px;
-    }
-
     .category-headline {
         margin-top: 6px;
         margin-bottom: 6px;
@@ -264,14 +223,6 @@ a:visited {
 
     .page-headline {
         font-size: 16px;
-    }
-
-    .registry-about {
-        font-size: 8px;
-    }
-
-    .registry-about::first-letter {
-        font-size: 20px;
     }
 
     .category-headline {
