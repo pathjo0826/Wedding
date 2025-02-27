@@ -14,6 +14,14 @@
     margin: 2em;
 }
 
+.registry-introduction {
+    font-size: 16px;
+}
+
+.registry-introduction-comment {
+    font-size: 14px;
+}
+
 .registry-content {
     column-count: 2;
     column-gap: 20px;
@@ -130,6 +138,14 @@ a:visited {
         font-size: 26px;
     }
 
+    .registry-introduction {
+        font-size: 14px;
+    }   
+
+    .registry-introduction-comment {
+        font-size: 12px;
+    }
+
     .category-headline {
         font-size: 15px;
         margin-top: 8px;
@@ -157,6 +173,14 @@ a:visited {
 
     .page-headline {
         font-size: 22px;
+    }
+
+    .registry-introduction {
+        font-size: 12px;
+    }
+
+    .registry-introduction-comment {
+        font-size: 10px;
     }
 
     .columns {
@@ -192,6 +216,14 @@ a:visited {
         font-size: 18px;
     }
 
+    .registry-introduction {
+        font-size: 10px;
+    }
+
+    .registry-introduction-comment {
+        font-size: 8px;
+    }
+
     .category-headline {
         margin-top: 6px;
         margin-bottom: 6px;
@@ -223,6 +255,14 @@ a:visited {
 
     .page-headline {
         font-size: 16px;
+    }
+
+    .registry-introduction {
+        font-size: 8px;
+    }
+
+    .registry-introduction-comment {
+        font-size: 7px;
     }
 
     .category-headline {
