@@ -9,7 +9,8 @@
     </div>
 
     <div class="form-container">
-        <form class="form" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
+        <div class="thank-you" *ngIf="isFormSubmitted">Thank you!</div>
+        <form class="form" *ngIf="!isFormSubmitted" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
             <h1>RSVP</h1>
             <div class="attending-container">
                 <div class="accept">
@@ -38,7 +39,6 @@
                     <button class="send-button" type="submit">SEND</button>
                 </div>
             </div>
-
         </form>
     </div>
 </div>

@@ -14,6 +14,9 @@ export class RsvpComponent {
   message: string = '';
   validationErrors: boolean[] = [false];
 
+  isFormSubmitted!: boolean;
+  isFormAccepted!: boolean;
+
   constructor(private rsvpService: RsvpService) {}
 
    async addGuest(guestForm: NgForm) {
@@ -51,6 +54,10 @@ export class RsvpComponent {
       this.guests = ['']; 
       // Reset errors
       this.validationErrors = [false]; 
+
+
+      // Working here...
+      this.isFormSubmitted = true;
 
     } catch (error) {
       console.error("Update failed", error);
