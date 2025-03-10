@@ -189,9 +189,8 @@ input[type="radio"]:hover {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
     font-family: 'Waterfall', cursive;
-    font-size: 140px;
+    font-size: 120px;
     text-align: center;
-    margin-top: 10px;
 } 
 
 @keyframes fadeIn {
@@ -215,6 +214,10 @@ input[type="radio"]:hover {
     input[type="radio"] {
         width: 15px;
         height: 15px;
+    }
+
+    .thank-you {
+        font-size: 105px;
     }
 }
 
@@ -264,7 +267,7 @@ input[type="radio"]:hover {
     }
 
     .thank-you {
-        font-size: 110px
+        font-size: 90px
     }
 }
 
@@ -328,7 +331,7 @@ input[type="radio"]:hover {
     }
 
     .thank-you {
-        font-size: 80px
+        font-size: 70px
     }
 }
 
@@ -340,6 +343,10 @@ input[type="radio"]:hover {
 
     .text-container {
         font-size: 12px;
+    }
+
+    .form-container {
+        margin-top: 1em;
     }
 
     h1 {
@@ -384,7 +391,7 @@ input[type="radio"]:hover {
     }
 
     .thank-you {
-        font-size: 50px
+        font-size: 60px
     }
 }
 
@@ -440,6 +447,6 @@ input[type="radio"]:hover {
     }
 
     .thank-you {
-        font-size: 40px
+        font-size: 50px
     }
 }
