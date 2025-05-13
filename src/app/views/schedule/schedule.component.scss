@@ -10,19 +10,32 @@
     margin: 0px;
 }
 
-.headline {
+.intro {
+    margin: 2em;
+}
+
+.intro,
+.ceremony-schedule,
+.party-schedule {
+    font-size: 16px;
+}
+
+.venue-headline {
     display: flex;
     justify-content: center;
     background-color: rgb(150, 164, 152);
     color: white;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.schedule-container {
-    font-size: 16px;
+.ceremony-schedule {
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: auto;
+    margin: 2em;
 }
 
-.grid-system {
+.party-schedule {
     display: grid;
     grid-template-columns: 10% auto;
     grid-template-rows: auto;
@@ -50,39 +63,44 @@ a {
     color: blue;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
 
-.schedule-container .headline {
-    font-size: 20px;
+    .intro,
+    .ceremony-schedule,
+    .party-schedule {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 1000px) {
-
     .page-headline {
         font-size: 26px;
     }
 
-    .schedule-container {
-        font-size: 14px;
+    .venue-headline {
+        font-size: 18px;
     }
 
-    .schedule-container .headline {
-        font-size: 18px;
+    .intro,
+    .ceremony-schedule,
+    .party-schedule {
+        font-size: 13px;
     }
 }
 
 @media (max-width: 800px) {
-
     .page-headline {
         font-size: 22px;
     }
 
-    .schedule-container {
-        font-size: 12px;
+    .venue-headline {
+        font-size: 16px;
     }
 
-    .schedule-container .headline {
-        font-size: 16px;
+    .intro,
+    .ceremony-schedule,
+    .party-schedule {
+        font-size: 11px;
     }
 }
 
@@ -92,12 +110,14 @@ a {
         font-size: 18px;
     }
 
-    .schedule-container {
-        font-size: 10px;
+    .venue-headline {
+        font-size: 14px;
     }
 
-    .schedule-container .headline {
-        font-size: 14px;
+    .intro,
+    .ceremony-schedule,
+    .party-schedule {
+        font-size: 9px;
     }
 }
 
@@ -107,11 +127,15 @@ a {
         font-size: 16px;
     }
 
-    .schedule-container {
+    .venue-headline {
+        font-size: 12px;
+    }
+
+    .intro,
+    .ceremony-schedule,
+    .party-schedule {
         font-size: 8px;
     }
 
-    .schedule-container .headline {
-        font-size: 12px;
-    }
+
 }

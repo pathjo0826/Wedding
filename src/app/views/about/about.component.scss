@@ -10,18 +10,18 @@
     margin: 0px;
 }
 
-.headline {
+.intro {
+    margin: 2em;
+    font-size: 16px;
+}
+
+.venue-headline {
     display: flex;
     justify-content: center;
     font-size: 20px;
     color: white;
     background-color: rgb(150, 164, 152);
     width: 100%;
-}
-
-.intro {
-    margin: 2em;
-    font-size: 14px;
 }
 
 .ceremony {
@@ -32,7 +32,7 @@
 
 .ceremony-content {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .ceremony-image {
@@ -45,13 +45,13 @@
     grid-template-columns: 2fr 1fr;
 }
 
-.party-image {
-    display: flex;
-}
-
 .party-content {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.party-image {
+    display: flex;
 }
 
 .desktop {
@@ -60,6 +60,9 @@
 
 .mobile {
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 picture {
@@ -81,23 +84,28 @@ img {
     transform: rotate(-2deg);
 }
 
-.party-image img {
+.party-image .desktop img {
     max-width: 60%;
     height: auto;
     object-fit: contain;
-    transform: rotate(2deg);
+    transform: rotate(3deg);
+}
+
+.party-image .mobile img {
+    max-width: 60%;
+    height: auto;
+    object-fit: contain;
+    transform: rotate(3deg);
+}
+
+.party-image .mobile picture img {
+    transform: rotate(-3deg);
 }
 
 @media (max-width: 1200px) {
 
-    .intro {
-        font-size: 14px;
-    }
-
-    .ceremony-content {
-        font-size: 14px;
-    }
-
+    .intro,
+    .ceremony-content,
     .party-content {
         font-size: 14px;
     }
@@ -112,23 +120,16 @@ img {
 }
 
 @media (max-width: 1000px) {
-
     .page-headline {
         font-size: 26px;
     }
 
-    .headline {
+    .venue-headline {
         font-size: 18px;
     }
 
-    .intro {
-        font-size: 13px;
-    }
-
-    .ceremony-content {
-        font-size: 13px;
-    }
-
+    .intro,
+    .ceremony-content,
     .party-content {
         font-size: 13px;
     }
@@ -141,22 +142,23 @@ img {
         max-width: 55%;
     }
 
-    .desktop img {
+    .party-image .desktop img {
         max-width: 65%;
     }
 }
 
 @media (max-width: 800px) {
-
     .page-headline {
         font-size: 22px;
     }
 
-    .headline {
+    .venue-headline {
         font-size: 16px;
     }
 
-    .intro {
+    .intro,
+    .ceremony-content,
+    .party-content {
         font-size: 11px;
     }
 
@@ -168,30 +170,21 @@ img {
         margin: 1.5em;
     }
 
-    .ceremony-content {
-        font-size: 11px;
-    }
-
-    .party-content {
-        font-size: 11px;
-    }
-
+    // Makes class=desktop invisible
     .desktop {
         display: none;
     }
 
+    // Makes class=mobile visible
     .mobile {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .ceremony-image img {
         max-width: 60%;
     }
 
-    .mobile img {
+    .party-image .mobile img {
         max-width: 55%;
     }
 }
@@ -202,7 +195,7 @@ img {
         justify-content: space-evenly;
     }
 
-    .mobile img {
+    .party-image .mobile img {
         max-width: 65%;
     }
 }
@@ -213,8 +206,14 @@ img {
         font-size: 18px;
     }
 
-    .headline {
+    .venue-headline {
         font-size: 14px;
+    }
+
+    .intro,
+    .ceremony-content,
+    .party-content {
+        font-size: 9px;
     }
 
     .intro {
@@ -235,15 +234,7 @@ img {
         margin-left: 1.2em;
     }
 
-    .ceremony-content {
-        font-size: 9px;
-    }
-
-    .party-content {
-        font-size: 9px;
-    }
-
-    .mobile img {
+    .party-image .mobile img {
         max-width: 70%;
         border: 6px solid white;
     }
@@ -255,11 +246,13 @@ img {
         font-size: 16px;
     }
 
-    .headline {
+    .venue-headline {
         font-size: 12px;
     }
 
-    .intro {
+    .intro,
+    .ceremony-content,
+    .party-content {
         font-size: 8px;
     }
 
@@ -268,19 +261,9 @@ img {
         margin-left: 0.8em;
     }
 
-    .ceremony-content {
-        font-size: 8px;
-        margin-right: 0.5em;
-    }
-
     .party {
         margin-top: 0.8em;
         margin-left: 0.8em;
-    }
-
-    .party-content {
-        font-size: 8px;
-        margin-right: 0.5em;
     }
 
     img {
