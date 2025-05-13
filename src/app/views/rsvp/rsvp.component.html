@@ -1,43 +1,42 @@
 <div class="page-headline">RSVP</div>
-<div class="container">
-    <div class="intro">
-        <p>Let us know if you will attend the wedding by RSVP before <b>15 May 2025</b>.</p>
-        <p>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
-            <app-plus-sign class="add-symbol"></app-plus-sign></p>
-        <p>If there is anything we should know, feel free to write us a message.</p>
-    </div>
+<div class="intro">
+    <p>Let us know if you will attend the wedding by RSVP before <b>15 May 2025</b>.</p>
+    <p>Fill in all guests that will attend from your invitation. Add a line for each person by pressing the
+        <app-plus-sign class="add-symbol"></app-plus-sign>
+    </p>
+    <p>If there is anything we should know, feel free to write us a message.</p>
+</div>
 
-    <div class="form-container">
-        <div class="thank-you" *ngIf="isFormSubmitted">Thank you!</div>
-        <form class="form" *ngIf="!isFormSubmitted" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
-            <h1>RSVP</h1>
-            <div class="attending">
-                <div class="accept">
-                    <label>HAPPILY ACCEPTS</label>
-                    <input type="radio" name="attending" [(ngModel)]="attending" [value]="true">
-                </div>
-                <div class="decline">
-                    <label>REGRETFULLY DECLINES</label>
-                    <input type="radio" name="attending" [(ngModel)]="attending" [value]="false">
-                </div>
+<div class="form-container">
+    <div class="thank-you" *ngIf="isFormSubmitted">Thank you!</div>
+    <form class="form" *ngIf="!isFormSubmitted" #guestForm="ngForm" (ngSubmit)="addGuest(guestForm)">
+        <h1>RSVP</h1>
+        <div class="attending">
+            <div class="accept">
+                <label>HAPPILY ACCEPTS</label>
+                <input type="radio" name="attending" [(ngModel)]="attending" [value]="true">
             </div>
+            <div class="decline">
+                <label>REGRETFULLY DECLINES</label>
+                <input type="radio" name="attending" [(ngModel)]="attending" [value]="false">
+            </div>
+        </div>
 
-            <div class="guests" *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
-                <div class="guest-field">
-                    <label>Guest {{i+1}}</label>
-                    <input type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
-                    <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
-                </div>
+        <div class="guests" *ngFor="let guest of guests; index as i; trackBy: trackByIndex">
+            <div class="guest-field">
+                <label>Guest {{i+1}}</label>
+                <input type="text" name="name{{i}}" placeholder="Name" [(ngModel)]="guests[i]">
+                <div class="error-message" *ngIf="validationErrors[i]">Name missing</div>
             </div>
-            <app-plus-sign class="add-guest" (click)="addLine()"></app-plus-sign>
+        </div>
+        <app-plus-sign class="add-guest" (click)="addLine()"></app-plus-sign>
 
-            <div class="message">
-                <label>Message</label>
-                <textarea name="message" [(ngModel)]="message"></textarea>
-                <div>
-                    <button class="send-button" type="submit">SEND</button>
-                </div>
+        <div class="message">
+            <label>Message</label>
+            <textarea name="message" [(ngModel)]="message"></textarea>
+            <div>
+                <button class="send-button" type="submit">SEND</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
