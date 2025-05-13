@@ -10,10 +10,6 @@
     margin: 0px;
 }
 
-.about-container {
-    font-size: 16px;
-}
-
 .headline {
     display: flex;
     justify-content: center;
@@ -24,7 +20,8 @@
 }
 
 .intro {
-    margin: 2em
+    margin: 2em;
+    font-size: 14px;
 }
 
 .ceremony {
@@ -35,6 +32,7 @@
 
 .ceremony-content {
     margin: 0;
+    font-size: 14px;
 }
 
 .ceremony-image {
@@ -53,6 +51,7 @@
 
 .party-content {
     margin: 0;
+    font-size: 14px;
 }
 
 .desktop {
@@ -87,16 +86,28 @@ img {
     height: auto;
     object-fit: contain;
     transform: rotate(2deg);
-    
 }
 
 @media (max-width: 1200px) {
+
+    .intro {
+        font-size: 14px;
+    }
+
+    .ceremony-content {
+        font-size: 14px;
+    }
+
+    .party-content {
+        font-size: 14px;
+    }
+
     .ceremony-image img {
         max-width: 55%;
     }
 
-    .desktop img {
-        max-width: 65%;
+    .party-image img {
+        max-width: 70%;
     }
 }
 
@@ -111,15 +122,15 @@ img {
     }
 
     .intro {
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    .ceremony {
-        font-size: 14px;
+    .ceremony-content {
+        font-size: 13px;
     }
 
-    .party {
-        font-size: 14px;
+    .party-content {
+        font-size: 13px;
     }
 
     img {
@@ -127,11 +138,11 @@ img {
     }
 
     .ceremony-image img {
-        max-width: 60%;
+        max-width: 55%;
     }
 
     .desktop img {
-        max-width: 60%;
+        max-width: 65%;
     }
 }
 
@@ -146,25 +157,23 @@ img {
     }
 
     .intro {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .ceremony {
-        font-size: 12px;
-        margin-right: 1em;
+        margin: 1.5em;
     }
 
     .party {
-        font-size: 12px;
-        margin-right: 1em;
+        margin: 1.5em;
     }
 
-    .ceremony-image img {
-        max-width: 60%;
+    .ceremony-content {
+        font-size: 11px;
     }
 
-    .desktop img {
-        max-width: 60%;
+    .party-content {
+        font-size: 11px;
     }
 
     .desktop {
@@ -176,6 +185,25 @@ img {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .ceremony-image img {
+        max-width: 60%;
+    }
+
+    .mobile img {
+        max-width: 55%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .mobile {
+        justify-content: space-evenly;
+    }
+
+    .mobile img {
+        max-width: 65%;
     }
 }
 
@@ -190,17 +218,29 @@ img {
     }
 
     .intro {
-        font-size: 10px;
+        font-size: 9px;
+        margin-top: 1.2em;
+        margin-left: 1.2em;
     }
 
     .ceremony {
-        font-size: 10px;
-        margin-right: 1em;
+        margin-right: 0em;
+        margin-top: 1.2em;
+        margin-left: 1.2em;
     }
 
     .party {
-        font-size: 10px;
-        margin-right: 1em;
+        margin-right: 0em;
+        margin-top: 1.2em;
+        margin-left: 1.2em;
+    }
+
+    .ceremony-content {
+        font-size: 9px;
+    }
+
+    .party-content {
+        font-size: 9px;
     }
 
     .mobile img {
@@ -224,11 +264,23 @@ img {
     }
 
     .ceremony {
+        margin-top: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    .ceremony-content {
         font-size: 8px;
+        margin-right: 0.5em;
     }
 
     .party {
+        margin-top: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    .party-content {
         font-size: 8px;
+        margin-right: 0.5em;
     }
 
     img {
