@@ -114,6 +114,17 @@ a {
         font-size: 14px;
     }
 
+    .intro {
+        position: relative;
+    }
+
+    .intro::first-letter {
+        font-size: 22px;
+        float: left;
+        margin-right: 0.12em;
+        line-height: 1;
+    }
+
     .intro,
     .ceremony-schedule,
     .party-schedule {
@@ -131,11 +142,14 @@ a {
         font-size: 12px;
     }
 
+    .intro::first-letter {
+        font-size: 20px;
+        margin-right: 0.1em;
+    }
+
     .intro,
     .ceremony-schedule,
     .party-schedule {
         font-size: 8px;
     }
-
-
 }
