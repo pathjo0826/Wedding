@@ -10,7 +10,7 @@
     margin: 0px;
 }
 
-.faq-container {
+.faq {
     margin: 2em;
 }
 
@@ -26,7 +26,7 @@
 
 .answer {
     font-size: 14px;
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
 }
 
 a {
@@ -36,12 +36,8 @@ a {
 
 @media (max-width: 1200px) {
 
-}
-
-@media (max-width: 1000px) {
-    
-    .page-headline {
-        font-size: 26px;
+    .faq {
+        margin: 1.8em;
     }
 
     .intro {
@@ -50,6 +46,29 @@ a {
 
     .question {
         font-size: 14px;
+    }
+
+    .answer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .page-headline {
+        font-size: 26px;
+    }
+
+    .faq {
+        margin: 1.6em;
+    }
+
+    .intro {
+        font-size: 13px;
+    }
+
+    .question {
+        font-size: 13px;
     }
 
     .answer {
@@ -62,12 +81,16 @@ a {
         font-size: 22px;
     }
 
+    .faq {
+        margin: 1.4em;
+    }
+
     .intro {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .question {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .answer {
@@ -80,16 +103,31 @@ a {
         font-size: 18px;
     }
 
+    .faq {
+        margin: 1.2em;
+    }
+
+    .faq::first-letter {
+        /* Make the first letter larger */
+        font-size: 22px;
+        /* Align it to the left of the text */
+        float: left;
+        /* Add a bit of spacing to the right */
+        margin-right: 0.12em;
+        /* Align with the paragraph's lines */
+        line-height: 1;
+    }
+
     .intro {
-        font-size: 11px;
+        font-size: 9px;
     }
 
     .question {
-        font-size: 11px;
+        font-size: 9px;
     }
 
     .answer {
-        font-size: 9px;
+        font-size: 8px;
     }
 }
 
@@ -98,15 +136,24 @@ a {
         font-size: 16px;
     }
 
+    .faq {
+        margin: 1em;
+    }
+
+    .faq::first-letter {
+        font-size: 20px;
+        margin-right: 0.1em;
+    }
+
     .intro {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .question {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .answer {
-        font-size: 8px;
+        font-size: 7px;
     }
 }
