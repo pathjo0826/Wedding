@@ -23,6 +23,7 @@ import { RegistryComponent } from './views/registry/registry.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { EmailDisplayComponent } from './components/email-display/email-display.component';
 import { PlusSignComponent } from './components/plus-sign/plus-sign.component';
+import { CapitalizePipe } from './components/capitalize-pipe/capitalize.pipe';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
     FaqComponent,
     EmailDisplayComponent,
     PlusSignComponent,
+    CapitalizePipe,
   ],
   imports: [
     BrowserModule,

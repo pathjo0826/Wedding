@@ -17,7 +17,7 @@
     <div class="gift-registry">
         <div class="left-column">
             <ng-container *ngFor="let category of ['kitchen', 'bathroom', 'bedroom']; let i = index">
-                <div class="category">{{category}}</div>
+                <div class="category">{{category | capitalize}}</div>
                 <div class="gift-item" *ngFor="let gift of sortGifts(category)">
                     <button class="checkbox" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                         [class.ticked]="gift.claimed"></button>
@@ -27,8 +27,8 @@
             </ng-container>
         </div>
         <div class="right-column">
-            <ng-container *ngFor="let category of ['living-room', 'other']; let i = index">
-                <div class="category">{{category}}</div>
+            <ng-container *ngFor="let category of ['living room', 'other']; let i = index">
+                <div class="category">{{category | capitalize}}</div>
                 <div class="gift-item" *ngFor="let gift of sortGifts(category)">
                     <button class="checkbox" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
                         [class.ticked]="gift.claimed"></button>
