@@ -32,7 +32,6 @@
 .right-column {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .category {
@@ -49,6 +48,9 @@
     display: flex;
     align-items: center;
     gap: 3em;
+    font-size: 14px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .gift-item:nth-child(even) {
@@ -72,11 +74,12 @@
     width: 16px;
     height: 16px;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .checkbox-placeholder {
-    visibility: hidden;
     /* occupies space but is not visible */
+    visibility: hidden;
 }
 
 .checkbox:hover {
@@ -87,13 +90,13 @@
 .checkbox.ticked::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: 4px;
-    width: 6px;
-    height: 18px;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 70%;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 a:link,
@@ -108,30 +111,23 @@ a:visited {
         margin: 1.8em;
     }
 
-    .intro {
+    .intro,
+    .gift-item {
         font-size: 14px;
     }
 
     .intro .comment {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .category {
         font-size: 16px;
     }
 
-    td {
-        padding-left: 25px;
-        font-size: 13px;
-    }
-
-    .td-checkbox {
-        width: 18px;
-    }
-
-    .button {
-        width: 13px;
-        height: 13px;
+    .checkbox,
+    .checkbox-placeholder {
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -145,30 +141,24 @@ a:visited {
         margin: 1.6em;
     }
 
-    .intro {
+    .intro,
+    .gift-item {
         font-size: 13px;
+        gap: 2em;
     }
 
     .intro .comment {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .category {
         font-size: 15px;
     }
 
-    td {
-        padding-left: 20px;
-        font-size: 12px;
-    }
-
-    .td-checkbox {
-        width: 16px;
-    }
-
-    .button {
-        width: 12px;
-        height: 12px;
+    .checkbox,
+    .checkbox-placeholder {
+        width: 13px;
+        height: 13px;
     }
 }
 
@@ -182,8 +172,14 @@ a:visited {
         margin: 1.4em;
     }
 
-    .intro {
+    .gift-registry {
+        gap: 1em;
+    }
+
+    .intro,
+    .gift-item {
         font-size: 11px;
+        gap: 1.5em;
     }
 
     .intro .comment {
@@ -195,22 +191,16 @@ a:visited {
         padding: 2px;
     }
 
-    .columns {
-        column-gap: 15px;
-    }
-
-    td {
-        padding-left: 15px;
-        font-size: 10px;
-    }
-
-    .td-checkbox {
-        width: 14px;
-    }
-
-    .button {
+    .checkbox,
+    .checkbox-placeholder {
+        margin-left: 0.7em;
         width: 11px;
         height: 11px;
+    }
+
+    .checkbox.ticked::after {
+        border-right: 1.5px solid black;
+        border-bottom: 1.5px solid black;
     }
 }
 
@@ -224,8 +214,15 @@ a:visited {
         margin: 1.2em;
     }
 
-    .intro {
+    .gift-registry {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro,
+    .gift-item {
         font-size: 9px;
+        gap: 3em;
     }
 
     .intro .comment {
@@ -236,22 +233,15 @@ a:visited {
         font-size: 11px;
     }
 
-    .gifts {
-        column-count: 1;
+    .checkbox,
+    .checkbox-placeholder {
+        width: 9px;
+        height: 9px;
     }
 
-    td {
-        padding-left: 10px;
-        font-size: 9px;
-    }
-
-    .td-checkbox {
-        width: 12px;
-    }
-
-    .button {
-        width: 10px;
-        height: 10px;
+    .checkbox.ticked::after {
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
     }
 }
 
@@ -265,7 +255,8 @@ a:visited {
         margin: 1em;
     }
 
-    .intro {
+    .intro,
+    .gift-item {
         font-size: 8px;
     }
 
@@ -278,17 +269,9 @@ a:visited {
         padding: 1px;
     }
 
-    td {
-        padding-left: 10px;
-        font-size: 8px;
-    }
-
-    .td-checkbox {
-        width: 10px;
-    }
-
-    .button {
-        width: 9px;
-        height: 9px;
+    .checkbox,
+    .checkbox-placeholder {
+        width: 8px;
+        height: 8px;
     }
 }
