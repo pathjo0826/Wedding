@@ -1,29 +1,21 @@
 <div class="page-headline">REGISTRY</div>
-<div class="registry-container">
-    <p class="registry-introduction">
-        Dear family and friends,
-    </p>
-    <p class="registry-introduction">
-        Your presence at our wedding is truly the greatest gift we could ask for. The joy of celebrating this special
-        day
-        surrounded by the people we care for means everything to us. For those who have kindly expressed interest in
-        giving a gift,
-        we've created this registry simply as a source of inspiration. Please know that we have absolutely no
-        expectations -
-        sharing our day with you is more than enough. We're excited to begin this new chapter of our lives and are
-        deeply
-        grateful for your love and support.
-    </p>
-    <p class="registry-introduction-comment">
-        <i>When you have selected an item please check the box on the left side. This will mark the item as taken. In
-            case
-            you change your mind it is also possible to uncheck the box by clicking it again. Items with no checkbox
-            indicate that
-            we are wishing more than one.
-        </i>
-    </p>
-    <div class="registry-content">
-        <div class="category-headline">Kitchen</div>
+<div class="registry">
+    <div class="intro">
+        <p>Dear family and friends,</p>
+        <p>Your presence at our wedding is truly the greatest gift we could ask for. The joy of celebrating this
+            special day surrounded by the people we care for means everything to us. For those who have kindly expressed
+            interest in giving a gift, we've created this registry simply as a source of inspiration. Please know that we have
+            absolutely no expectations - sharing our day with you is more than enough. We're excited to begin this new chapter of our
+            lives and are deeply grateful for your love and support.
+        </p>
+        <p class="comment"><i>When you have selected an item please check the box on the left side. This will mark the
+                item as taken. In case you change your mind it is also possible to uncheck the box by clicking it again. Items with no
+                checkbox indicate that we are wishing more than one.</i>
+        </p>
+    </div>
+
+    <div class="gifts">
+        <div class="categories">Kitchen</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('kitchen')">
@@ -38,7 +30,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="category-headline">Living Room</div>
+        <div class="categories">Living Room</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('living-room')">
@@ -53,7 +45,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="category-headline">Bedroom</div>
+        <div class="categories">Bedroom</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('bedroom')">
@@ -68,7 +60,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="category-headline">Bathroom</div>
+        <div class="categories">Bathroom</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('bathroom')">
@@ -83,7 +75,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="category-headline">Other</div>
+        <div class="categories">Other</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('other')">

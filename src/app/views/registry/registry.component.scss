@@ -10,19 +10,19 @@
     margin: 0px;
 }
 
-.registry-container {
+.registry {
     margin: 2em;
 }
 
-.registry-introduction {
+.intro {
     font-size: 16px;
 }
 
-.registry-introduction-comment {
+.intro .comment {
     font-size: 14px;
 }
 
-.registry-content {
+.gifts {
     column-count: 2;
     column-gap: 20px;
     height: 80vh;
@@ -31,22 +31,19 @@
     column-fill: auto;
 }
 
-table {
-    width: 100%;
-    border-spacing: 0 10px;
-}
-
-.category-headline {
+.categories {
     display: flex;
     justify-content: center;
 
     background-color: rgb(150, 164, 152);
     color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    padding: 3px;
+    padding: 2px;
     font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0 10px;
 }
 
 tr:nth-child(odd) {
@@ -113,7 +110,19 @@ a:visited {
 
 @media (max-width: 1200px) {
 
-    .category-headline {
+    .registry {
+        margin: 1.8em;
+    }
+
+    .intro {
+        font-size: 14px;
+    }
+
+    .intro .comment {
+        font-size: 13px;
+    }
+
+    .categories {
         font-size: 16px;
     }
 
@@ -138,20 +147,20 @@ a:visited {
         font-size: 26px;
     }
 
-    .registry-introduction {
-        font-size: 14px;
-    }   
+    .registry {
+        margin: 1.6em;
+    }
 
-    .registry-introduction-comment {
+    .intro {
+        font-size: 13px;
+    }
+
+    .intro .comment {
         font-size: 12px;
     }
 
-    .category-headline {
+    .categories {
         font-size: 15px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        border-radius: 3px;
-        padding: 3px;
     }
 
     td {
@@ -175,29 +184,30 @@ a:visited {
         font-size: 22px;
     }
 
-    .registry-introduction {
-        font-size: 12px;
+    .registry {
+        margin: 1.4em;
     }
 
-    .registry-introduction-comment {
+    .intro {
+        font-size: 11px;
+    }
+
+    .intro .comment {
         font-size: 10px;
+    }
+
+    .categories {
+        font-size: 13px;
+        padding: 2px;
     }
 
     .columns {
         column-gap: 15px;
     }
 
-    .category-headline {
-        margin-top: 7px;
-        margin-bottom: 7px;
-        border-radius: 3px;
-        padding: 2px;
-        font-size: 14px;
-    }
-
     td {
         padding-left: 15px;
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .td-checkbox {
@@ -216,29 +226,29 @@ a:visited {
         font-size: 18px;
     }
 
-    .registry-introduction {
-        font-size: 10px;
+    .registry {
+        margin: 1.2em;
     }
 
-    .registry-introduction-comment {
+    .intro {
+        font-size: 9px;
+    }
+
+    .intro .comment {
         font-size: 8px;
     }
 
-    .category-headline {
-        margin-top: 6px;
-        margin-bottom: 6px;
-        border-radius: 2px;
-        padding: 2px;
-        font-size: 13px;
+    .categories {
+        font-size: 11px;
     }
 
-    .registry-content {
+    .gifts {
         column-count: 1;
     }
 
     td {
         padding-left: 10px;
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .td-checkbox {
@@ -257,25 +267,26 @@ a:visited {
         font-size: 16px;
     }
 
-    .registry-introduction {
+    .registry {
+        margin: 1em;
+    }
+
+    .intro {
         font-size: 8px;
     }
 
-    .registry-introduction-comment {
+    .intro .comment {
         font-size: 7px;
     }
 
-    .category-headline {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        border-radius: 2px;
-        padding: 2px;
-        font-size: 12px;
+    .categories {
+        font-size: 10px;
+        padding: 1px;
     }
 
     td {
         padding-left: 10px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .td-checkbox {
