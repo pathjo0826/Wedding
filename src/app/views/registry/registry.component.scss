@@ -22,16 +22,20 @@
     font-size: 14px;
 }
 
-.gifts {
-    column-count: 2;
-    column-gap: 20px;
-    height: 80vh;
-    overflow-y: auto;
-    /* Allow scrolling for overflow */
-    column-fill: auto;
+.gift-registry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
 }
 
-.categories {
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category {
     display: flex;
     justify-content: center;
 
@@ -41,65 +45,55 @@
     font-size: 18px;
 }
 
-table {
-    width: 100%;
-    border-spacing: 0 10px;
+.gift-item {
+    display: flex;
+    align-items: center;
+    gap: 3em;
 }
 
-tr:nth-child(odd) {
+.gift-item:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-td {
-    padding-left: 30px;
-    font-size: 14px;
-}
-
-.td-checkbox {
-    width: 20px;
-}
-
-.button {
-    width: 14px;
-    height: 14px;
-    border-radius: 0%;
-    border: 1px solid;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-
-    /* Removes any margin that could affect dimensions */
+.checkbox {
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 2px;
     padding: 0;
-    margin: 0;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.2s ease;
+}
 
-    display: flex;
-    justify-content: center;
+.checkbox,
+.checkbox-placeholder {
+    margin-left: 1em;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.checkbox-placeholder {
+    visibility: hidden;
+    /* occupies space but is not visible */
+}
+
+.checkbox:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
-/* CSS that creates the check mark */
-.button::after {
+.checkbox.ticked::after {
     content: "";
-    margin-left: 20px;
-    margin-top: 4px;
     position: absolute;
-    width: 18px;
-    height: 6px;
-    border-left: 2px solid black;
-    /* Left part of the tick */
+    top: -5px;
+    left: 4px;
+    width: 6px;
+    height: 18px;
+    border-right: 2px solid black;
     border-bottom: 2px solid black;
-    /* Bottom part of the tick */
-    transform: rotate(-45deg) scale(0);
-    /* Hidden by default */
-    transform-origin: bottom left;
-    opacity: 0;
-}
-
-.button.ticked::after {
-    transform: rotate(-45deg) scale(1);
-    opacity: 1;
-}
-
-.button:hover {
-    transform: scale(1.1);
+    transform: rotate(45deg);
 }
 
 a:link,
@@ -122,7 +116,7 @@ a:visited {
         font-size: 13px;
     }
 
-    .categories {
+    .category {
         font-size: 16px;
     }
 
@@ -159,7 +153,7 @@ a:visited {
         font-size: 12px;
     }
 
-    .categories {
+    .category {
         font-size: 15px;
     }
 
@@ -196,7 +190,7 @@ a:visited {
         font-size: 10px;
     }
 
-    .categories {
+    .category {
         font-size: 13px;
         padding: 2px;
     }
@@ -238,7 +232,7 @@ a:visited {
         font-size: 8px;
     }
 
-    .categories {
+    .category {
         font-size: 11px;
     }
 
@@ -279,7 +273,7 @@ a:visited {
         font-size: 7px;
     }
 
-    .categories {
+    .category {
         font-size: 10px;
         padding: 1px;
     }

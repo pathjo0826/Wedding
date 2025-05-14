@@ -4,18 +4,46 @@
         <p>Dear family and friends,</p>
         <p>Your presence at our wedding is truly the greatest gift we could ask for. The joy of celebrating this
             special day surrounded by the people we care for means everything to us. For those who have kindly expressed
-            interest in giving a gift, we've created this registry simply as a source of inspiration. Please know that we have
-            absolutely no expectations - sharing our day with you is more than enough. We're excited to begin this new chapter of our
+            interest in giving a gift, we've created this registry simply as a source of inspiration. Please know that
+            we have
+            absolutely no expectations - sharing our day with you is more than enough. We're excited to begin this new
+            chapter of our
             lives and are deeply grateful for your love and support.
         </p>
         <p class="comment"><i>When you have selected an item please check the box on the left side. This will mark the
-                item as taken. In case you change your mind it is also possible to uncheck the box by clicking it again. Items with no
-                checkbox indicate that we are wishing more than one.</i>
+                item as taken. In case you change your mind it is also possible to uncheck the box by clicking it again.
+                Items with no checkbox indicate that we are wishing more than one.</i>
         </p>
     </div>
+    <div class="gift-registry">
+        <div class="left-column">
+            <ng-container *ngFor="let category of ['kitchen', 'bedroom', 'other']; let i = index">
+                <div class="category">{{category}}</div>
+                <div class="gift-item" *ngFor="let gift of sortGifts(category)">
+                    <button class="checkbox" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                        [class.ticked]="gift.claimed"></button>
+                    <span class="checkbox-placeholder" *ngIf="gift.quantity !== 'single'"></span>
+                    <a [href]="gift.link" target="_blank" [ngStyle]="getGiftStyle(gift)">{{gift.name}}</a>
+                </div>
+            </ng-container>
+        </div>
+        <div class="right-column">
+            <ng-container *ngFor="let category of ['living-room', 'bathroom']; let i = index">
+                <div class="category">{{category}}</div>
+                <div class="gift-item" *ngFor="let gift of sortGifts(category)">
+                        <button class="checkbox" *ngIf="gift.quantity === 'single'" (click)="updateGiftStatus(gift)"
+                            [class.ticked]="gift.claimed"></button>
+                        <span class="checkbox-placeholder" *ngIf="gift.quantity !== 'single'"></span>
+                    <a [href]="gift.link" target="_blank" [ngStyle]="getGiftStyle(gift)">{{gift.name}}</a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <!--
 
     <div class="gifts">
-        <div class="categories">Kitchen</div>
+        <div class="category">Kitchen</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('kitchen')">
@@ -30,7 +58,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="categories">Living Room</div>
+        <div class="category">Living Room</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('living-room')">
@@ -45,7 +73,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="categories">Bedroom</div>
+        <div class="category">Bedroom</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('bedroom')">
@@ -60,7 +88,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="categories">Bathroom</div>
+        <div class="category">Bathroom</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('bathroom')">
@@ -75,7 +103,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="categories">Other</div>
+        <div class="category">Other</div>
         <table>
             <tbody>
                 <tr *ngFor="let gift of sortGifts('other')">
@@ -91,4 +119,5 @@
             </tbody>
         </table>
     </div>
+    -->
 </div>
