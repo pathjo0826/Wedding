@@ -1,34 +1,29 @@
 <div class="page-headline">CONTACT</div>
-<div class="contact-container">
-    <div class="left-column">
-        <div class="contact-text">
-                <p class="content">Reach out to us with any question, big or small. Use this form, call us or send a private text
-                message. The toastmaster is also reachable through this form.</p>
-        </div>
-        <div class="image-container">
-            <img src="assets/images/ratio1-1/picture16-1_1.jpg">
-        </div>
+<div class="contact">
+    <div class="intro">
+        <p>Reach out to us with any question, big or small. Use this form, call us or send a private
+            text message. The toastmaster is also reachable through this form.</p>
+        <div class="image"><img src="assets/images/ratio1-1/picture16-1_1.jpg"></div>
     </div>
-    <div class="right-column">
-        <div class="confirmation" *ngIf="isFormAccepted">E-mail has been sent!</div>
-        <form *ngIf="!isFormAccepted" class="form" #contactForm="ngForm" (ngSubmit)="send()">
-            <div class="name-field">
-                <label class="label">Name:</label>
-                <input class="input-field" type="text" name="name" [(ngModel)]="form.name" placeholder="Name">
-                <div class="input-field-error" *ngIf="isNameMissing && isFormSubmitted">Name missing</div>
+    <div class="form-container">
+        <div class="confirmation-message" *ngIf="isFormAccepted">E-mail has been sent!</div>
+        <form class="form" *ngIf="!isFormAccepted" #contactForm="ngForm" (ngSubmit)="send()">
+            <div class="name">
+                <label>Name:</label>
+                <input type="text" name="name" [(ngModel)]="form.name" placeholder="Name">
+                <div class="error-message" *ngIf="isNameMissing && isFormSubmitted">Name missing</div>
             </div>
-            <div class="email-field">
-                <label class="label">E-mail:</label>
-                <input class="input-field" type="email" name="email" [(ngModel)]="form.email" placeholder="E-mail">
-                <div class="input-field-error" *ngIf="isEmailMissing && isFormSubmitted">E-mail missing</div>
-                <div class="input-field-error" *ngIf="isEmailIncorrect && isFormSubmitted">Invalid e-mail</div>
+            <div class="email">
+                <label>E-mail:</label>
+                <input type="email" name="email" [(ngModel)]="form.email" placeholder="E-mail">
+                <div class="error-message" *ngIf="isEmailMissing && isFormSubmitted">E-mail missing</div>
+                <div class="error-message" *ngIf="isEmailIncorrect && isFormSubmitted">Invalid e-mail</div>
             </div>
-
-            <div class="message-field">
-                <label class="label">Message:</label>
-                <textarea class="input-textarea" name="message" [(ngModel)]="form.message"></textarea>
-                <div class="input-field-error" *ngIf="isMessageMissing && isFormSubmitted">No message</div>
-                <div class="send-button-container">
+            <div class="message">
+                <label>Message:</label>
+                <textarea name="message" [(ngModel)]="form.message"></textarea>
+                <div class="error-message" *ngIf="isMessageMissing && isFormSubmitted">No message</div>
+                <div>
                     <button class="send-button" type="submit">SEND</button>
                 </div>
             </div>

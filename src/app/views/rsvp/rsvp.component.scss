@@ -94,12 +94,12 @@ input[type="radio"]:hover {
     align-items: center;
     flex-direction: column;
     gap: 4px;
-    width: 100%;
+    width: 55%;
 }
 
 .guest-field {
     margin-top: 1em;
-    width: 55%;
+    width: 100%;
 }
 
 .guest-field label {
@@ -147,6 +147,7 @@ input[type="radio"]:hover {
     flex-direction: column;
     gap: 4px;
     width: 55%;
+
 }
 
 .message textarea {
@@ -306,9 +307,21 @@ input[type="radio"]:hover {
 
     }
 
+    .guests {
+        width: 65%;
+    }
+
     .guest-field input {
         font-size: 12px;
         height: 20px;
+    }
+
+    .add-guest {
+        width: 65%;
+    }
+
+    .message {
+        width: 65%;
     }
 
     .message label {

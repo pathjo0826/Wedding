@@ -36,7 +36,7 @@ export class ContactComponent {
     this.isFormAccepted = false;
   }
   
-  send() {
+  public send() {
     
     this.isNameMissing = false;
     this.isEmailMissing = false;
@@ -54,20 +54,20 @@ export class ContactComponent {
     }
   }
 
-  validateFormData() {
+  public validateFormData() {
     this.validateName();
     this.validateEmail();
     this.validateMessage();
   }
 
-  validateName() {
+  public validateName() {
     if (this.form.name.trim().length < 1 && this.isFormSubmitted) {
       this.isNameMissing = true;
       throw Error;
     }
   }
 
-  validateEmail() {
+  public validateEmail() {
     if (!this.form.email && this.isFormSubmitted) {
       this.isEmailMissing = true;
       throw Error;
@@ -78,14 +78,14 @@ export class ContactComponent {
     }
   }
 
-  validateMessage() {
+  public validateMessage() {
     if (this.form.message.trim().length < 1 && this.isFormSubmitted) {
       this.isMessageMissing = true;
       throw Error;
     }
   }
 
-  acknowledgeSubmission(){
+  public acknowledgeSubmission(){
     this.isFormAccepted = true;
   }
 }

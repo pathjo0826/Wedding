@@ -10,46 +10,26 @@
     margin: 0px;
 }
 
-.contact-container {
+.contact {
     margin: 2em;
     display: grid;
     grid-template-columns: 3fr 7fr;
     column-gap: 3%;
 }
 
-.left-column {
+.intro {
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.contact-text {
+.image {
     display: flex;
     justify-content: center;
 }
 
-.content {
-    position: relative;
-    font-size: 16px;
-}
-
-.content::first-letter {
-    /* Make the first letter larger */
-    font-size: 40px; 
-    /* Align it to the left of the text */
-    float: left; 
-    /* Add a bit of spacing to the right */
-    margin-right: 0.12em; 
-    /* Align with the paragraph's lines */
-    line-height: 1;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-}
-
-img {
+.image img {
     margin-top: 2em;
     width: 70%;
     height: auto;
@@ -60,40 +40,48 @@ img {
     transform: rotate(-3deg);
 }
 
-.right-column {
+.form-container {
     margin-left: 1em;
     padding-left: 3em;
     border-left: 1px solid rgb(150, 164, 152);
 }
 
-.name-field {
+.confirmation-message {
+    margin-top: 1em;
+    font-size: 16px;
+}
+
+.name {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
 }
 
-.email-field {
+.email {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
 }
 
-.message-field {
+.message {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.label {
+.name label,
+.email label,
+.message label {
     font-size: 16px;
     color: rgb(97, 96, 96);
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
 
-.input-field {
+.name input,
+.email input {
     margin-bottom: 0.5em;
     width: 60%;
     height: 30px;
@@ -106,22 +94,23 @@ img {
     background-color: rgb(252, 251, 244);
 }
 
-.input-field-error {
-    color: red;
-    font-size: 14px;
-}
-
-.input-field::placeholder {
+.name input::placeholder,
+.email input::placeholder {
     font-family: 'Lora', cursive;
     font-size: 14px;
 }
 
-.input-textarea {
+.message textarea {
     font-size: 14px;
     line-height: 14px;
     width: 60%;
     height: calc(14px * 8);
     font-family: 'Lora', cursive;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
 }
 
 .send-button {
@@ -146,12 +135,18 @@ img {
     cursor: pointer;
 }
 
-.confirmation {
-    margin-top: 1em;
-    font-size: 16px;
-}
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+
+    .intro,
+    .confirmation-message {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding-left: 2.5em;
+    }
+}
 
 
 @media (max-width: 1000px) {
@@ -160,55 +155,63 @@ img {
         font-size: 26px;
     }
 
+    .contact {
+        margin: 1.6em;
+    }
+
+    .intro,
+    .confirmation-message {
+        font-size: 13px;
+    }
+
     .contact-container {
         margin: 1.6em;
         column-gap: 2%;
     }
 
-    .content {
-        font-size: 14px;
-    }
-
-    .content::first-letter {
-        font-size: 35px;
-    }
-
-    img {
+    .image img {
+        width: 70%;
         margin-top: 1.6em;
         border: 8px solid white;
     }
 
-    .right-column {
+    .form-container {
         margin-left: 0.8em;
         padding-left: 2.5em;
     }
 
-    .label {
+    .name label,
+    .email label,
+    .message label {
         font-size: 14px;
         margin-bottom: 0.4em;
     }
 
-    .input-field {
+    .name input,
+    .email input {
         font-size: 14px;
         height: 26px;
+        width: 65%;
         margin-bottom: 0.4em;
     }
 
-    .input-field::placeholder {
+    .name input::placeholder,
+    .email input::placeholder {
         font-size: 12px;
     }
 
-    .input-textarea {
+    .message textarea {
         font-size: 12px;
         height: calc(12px * 8);
+        width: 65%;
+    }
+
+    .error-message {
+        font-size: 12px;
     }
 
     .send-button {
         font-size: 12px;
-    }
-
-    .confirmation {
-        font-size: 14px;
     }
 }
 
@@ -218,57 +221,67 @@ img {
         font-size: 22px;
     }
 
+    .contact {
+        margin: 1.2em;
+    }
+
+    .intro,
+    .confirmation-message {
+        font-size: 11px;
+    }
+
     .contact-container {
         margin: 1.2em;
         column-gap: 1.5%;
     }
 
-    .content {
-        font-size: 12px;
-    }
-
-    .content::first-letter {
-        font-size: 30px;
-    }
-
-    img {
+    .image img {
+        width: 75%;
         margin-top: 1.2em;
         border: 6px solid white;
     }
 
-    .right-column {
+    .form-container {
         margin-left: 0.6em;
         padding-left: 2em;
     }
-    .label {
+
+    .name label,
+    .email label,
+    .message label {
         font-size: 12px;
         margin-bottom: 0.3em;
     }
 
-    .input-field {
+    .name input,
+    .email input {
         font-size: 12px;
         height: 22px;
         margin-bottom: 0.3em;
+        width: 70%
     }
 
-    .input-field::placeholder {
+    .name input::placeholder,
+    .email input::placeholder {
         font-size: 10px;
     }
 
-    .input-textarea {
+    .message textarea {
         font-size: 12px;
         height: calc(10px * 8);
+        width: 70%
     }
+
+    .error-message {
+        font-size: 10px;
+    }
+
 
     .send-button {
         border-radius: 4px;
         font-size: 10px;
         margin-top: 0.3em;
         padding: 0.3em 0.6em 0.3em;
-    }
-
-    .confirmation {
-        font-size: 12px;
     }
 }
 
@@ -278,46 +291,70 @@ img {
         font-size: 18px;
     }
 
+    .contact {
+        margin: 1em;
+    }
+
+    .intro,
+    .confirmation-message {
+        font-size: 9px;
+    }
+
     .contact-container {
         margin: 0.8em;
         column-gap: 1%;
     }
 
-    .content {
-        font-size: 10px;
+    .intro p::first-letter {
+        /* Make the first letter larger */
+        font-size: 22px;
+        /* Align it to the left of the text */
+        float: left;
+        /* Add a bit of spacing to the right */
+        margin-right: 0.12em;
+        /* Align with the paragraph's lines */
+        line-height: 1;
     }
 
-    .content::first-letter {
-        font-size: 25px;
-    }
-
-    img {
+    .image img {
+        width: 80%;
         margin-top: 0.8em;
         border: 6px solid white;
     }
 
-    .right-column {
+    .form-container {
         margin-left: 0.4em;
         padding-left: 1.5em;
     }
-    .label {
+
+    .name label,
+    .email label,
+    .message label {
         font-size: 10px;
         margin-bottom: 0.2em;
     }
 
-    .input-field {
+    .name input,
+    .email input {
         font-size: 10px;
         height: 18px;
         margin-bottom: 0.2em;
+        width: 75%;
     }
 
-    .input-field::placeholder {
+    .name input::placeholder,
+    .email input::placeholder {
         font-size: 9px;
     }
 
-    .input-textarea {
+    .message textarea {
         font-size: 10px;
         height: calc(8px * 8);
+        width: 75%;
+    }
+
+    .error-message {
+        font-size: 9px;
     }
 
     .send-button {
@@ -325,10 +362,6 @@ img {
         font-size: 9px;
         margin-top: 0.2em;
         padding: 0.2em 0.5em 0.2em;
-    }
-
-    .confirmation {
-        font-size: 10px;
     }
 }
 
@@ -338,58 +371,63 @@ img {
         font-size: 16px;
     }
 
-    .contact-container {
-        margin: 0.4em;
-        column-gap: 0.5%;
+    .contact {
+        margin: 0.6em;
     }
 
-    .content {
+    .intro,
+    .confirmation-message {
         font-size: 8px;
     }
 
-    .content::first-letter {
+    .intro p::first-letter {
         font-size: 20px;
+        margin-right: 0.1em;
     }
 
-    img {
+    .image img {
         margin-top: 0.4em;
-        width: 60%;
+        width: 80%;
         border: 4px solid white;
     }
 
-    .right-column {
+    .form-container {
         margin-left: 0.2em;
         padding-left: 1em;
     }
 
-    .label {
+    .name label,
+    .email label,
+    .message label {
         font-size: 8px;
         margin-bottom: 0.1em;
     }
 
-    .input-field {
+    .name input,
+    .email input {
         font-size: 8px;
         height: 14px;
         margin-bottom: 0.1em;
     }
-    
-    .input-field::placeholder {
+
+    .name input::placeholder,
+    .email input::placeholder {
         font-size: 7px;
     }
 
-    .input-textarea {
+    .error-message {
+        font-size: 7px;
+    }
+
+    .message textarea {
         font-size: 8px;
         height: calc(6px * 8);
     }
-    
+
     .send-button {
         border-radius: 2px;
         font-size: 7px;
         margin-top: 0em;
         padding: 0.2em 0.5em 0.2em;
-    }
-
-    .confirmation {
-        font-size: 8px;
     }
 }
