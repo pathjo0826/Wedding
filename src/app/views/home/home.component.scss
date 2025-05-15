@@ -1,4 +1,4 @@
-.welcome-text {
+.welcome {
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Waterfall', cursive;
@@ -30,14 +30,14 @@
     margin-right: 1.5em;
 }
 
-.our-story-headline {
+.headline {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     font-size: 26px;
 }
 
-.our-story-text {
+.our-story {
     margin: 2em;
     font-size: 14px;
     margin-top: 15px;
@@ -48,18 +48,18 @@
     overflow-y: auto;
 }
 
-.our-story-text::first-letter {
+.our-story::first-letter {
     /* Make the first letter larger */
-    font-size: 36px; 
+    font-size: 36px;
     /* Align it to the left of the text */
-    float: left; 
+    float: left;
     /* Add a bit of spacing to the right */
-    margin-right: 0.1em; 
+    margin-right: 0.1em;
     /* Align with the paragraph's lines */
-    line-height: 1; 
+    line-height: 1;
 }
 
-.collage-container {
+.collage {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto;
@@ -119,17 +119,18 @@
     position: relative;
 }
 
-.collage-container img {
+.collage img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
     filter: grayscale(100%);
-    transition: filter 0.3s ease; /* Smooth transition to color */
+    transition: filter 0.3s ease;
+    /* Smooth transition to color */
 }
 
-.collage-container img:hover {
+.collage img:hover {
     filter: grayscale(0%);
 }
 
@@ -138,7 +139,8 @@
     top: 85%;
     left: 10%;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Adds a subtle shadow for readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    /* Adds a subtle shadow for readability */
     font-size: 16px;
     font-weight: bold;
 }
@@ -148,7 +150,8 @@
     top: 90%;
     left: 10%;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Adds a subtle shadow for readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    /* Adds a subtle shadow for readability */
     font-size: 16px;
     font-weight: bold;
 }
@@ -159,15 +162,16 @@
     left: 50%;
     max-height: 100%;
     max-width: auto;
-    
+
     transform: translate(-35%, -50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark semi-transparent background */
     padding: 40px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     z-index: 2;
 }
 
@@ -175,11 +179,11 @@
     max-width: 100%;
     max-height: 90vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid white; 
-  }
+    border: 2px solid white;
+}
 
 @media (max-width: 1200px) {
-    .welcome-text {
+    .welcome {
         margin-top: 50px;
         font-size: 70px;
     }
@@ -198,7 +202,7 @@
 }
 
 @media (max-width: 1000px) {
-    .welcome-text {
+    .welcome {
         margin-top: 60px;
         font-size: 65px;
     }
@@ -212,12 +216,16 @@
         width: 4px;
     }
 
+    .headline {
+        font-size: 24px;
+    }
+
     .our-story-text {
         font-size: 12px;
         column-gap: 18px;
     }
 
-    .our-story-text::first-letter {
+    .our-story::first-letter {
         font-size: 30px;
     }
 
@@ -231,7 +239,7 @@
 }
 
 @media (max-width: 800px) {
-    .welcome-text {
+    .welcome {
         margin-top: 60px;
         font-size: 52px;
     }
@@ -240,18 +248,18 @@
         font-size: 16px;
     }
 
-    .our-story-headline {
+    .headline {
         margin-top: 20px;
         font-size: 22px;
     }
 
-    .our-story-text {
+    .our-story {
         font-size: 10px;
         column-gap: 12px;
         margin-top: 10px;
     }
 
-    .our-story-text::first-letter {
+    .our-story::first-letter {
         font-size: 25px;
     }
 
@@ -271,7 +279,7 @@
 }
 
 @media (max-width: 600px) {
-    .welcome-text {
+    .welcome {
         margin-top: 50px;
         margin-bottom: 30px;
         font-size: 38px;
@@ -286,17 +294,17 @@
         width: 3px;
     }
 
-    .our-story-headline {
+    .headline {
         margin-top: 15px;
         font-size: 18px;
     }
 
-    .our-story-text {
+    .our-story {
         font-size: 8px;
         column-gap: 8px;
     }
 
-    .our-story-text::first-letter {
+    .our-story::first-letter {
         font-size: 20px;
     }
 
@@ -310,7 +318,7 @@
 }
 
 @media (max-width: 450px) {
-    .welcome-text {
+    .welcome {
         margin-top: 50px;
         font-size: 35px;
     }
@@ -319,15 +327,15 @@
         font-size: 10px;
     }
 
-    .our-story-headline {
+    .headline {
         font-size: 14px;
     }
 
-    .our-story-text {
+    .our-story {
         font-size: 7px;
     }
 
-    .our-story-text::first-letter {
+    .our-story::first-letter {
         font-size: 18px;
         column-gap: 6px;
     }
@@ -346,7 +354,7 @@
 }
 
 @media (max-width: 400px) {
-    .welcome-text {
+    .welcome {
         margin-top: 50px;
         font-size: 28px;
     }
