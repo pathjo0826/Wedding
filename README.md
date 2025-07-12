@@ -43,3 +43,6 @@ Relevant keys are found in reCAPTCHA.txt
 EmailJS is used as the service provider for automatic e-mail forwarding of form data in the Contact View. The EmailJS SDK is 
 installed/used and configured in the EmailService. Necessary parameters are found on the EmailJS dashboard on
 `https://dashboard.emailjs.com/sign-in`.
+
+Email: patrikandclaudia2025@outlook.com
+Password: Not-to-be-shared
